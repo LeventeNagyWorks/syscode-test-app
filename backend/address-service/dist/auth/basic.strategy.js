@@ -18,7 +18,7 @@ let BasicStrategy = class BasicStrategy extends (0, passport_1.PassportStrategy)
         super();
     }
     validate(username, password) {
-        if (username === 'admin' && password === 'password') {
+        if (username === 'admin' && password === 'admin') {
             return { userId: 1, username: username };
         }
         throw new common_1.UnauthorizedException();

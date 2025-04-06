@@ -31,3 +31,206 @@
 2025-04-06T13:57:13.472Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
 2025-04-06T13:57:13.476Z [INFO]: Nest application successfully started {"context":"NestApplication"}
 2025-04-06T13:57:13.481Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T14:14:15.173Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-06T14:14:15.178Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:14:15.178Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-06T14:14:15.180Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-06T14:14:15.181Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:14:15.182Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:14:15.183Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-06T14:14:15.184Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-06T14:14:15.184Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:14:15.187Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-06T14:14:15.192Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T14:16:35.883Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-06T14:16:35.888Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:16:35.888Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-06T14:16:35.889Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-06T14:16:35.890Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:16:35.891Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:16:35.891Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-06T14:16:35.891Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-06T14:16:35.892Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:16:35.895Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-06T14:16:35.899Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T14:16:46.652Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T14:16:46.652Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T14:16:46.740Z [ERROR]: relation "address_schema.address" does not exist {"trace":"QueryFailedError: relation \"address_schema.address\" does not exist\n    at PostgresQueryRunner.query (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\driver\\src\\driver\\postgres\\PostgresQueryRunner.ts:328:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async SelectQueryBuilder.loadRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3801:25)\n    at async SelectQueryBuilder.executeEntitiesAndRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3547:26)\n    at async SelectQueryBuilder.getRawAndEntities (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1671:29)\n    at async SelectQueryBuilder.getMany (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1761:25)\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:46:28\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:17","context":"ExceptionsHandler"}
+2025-04-06T14:27:11.516Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-06T14:27:11.521Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:27:11.521Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-06T14:27:11.522Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-06T14:27:11.523Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:27:11.523Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:27:11.524Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-06T14:27:11.525Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-06T14:27:11.526Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:27:11.530Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-06T14:27:11.534Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T14:27:14.803Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-06T14:27:14.808Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:27:14.809Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-06T14:27:14.810Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-06T14:27:14.811Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:27:14.812Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:27:14.812Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-06T14:27:14.813Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-06T14:27:14.813Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:27:14.817Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-06T14:27:14.821Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T14:40:08.935Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-06T14:40:08.941Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:40:08.941Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-06T14:40:08.942Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-06T14:40:08.943Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:40:08.944Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:40:08.944Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-06T14:40:08.945Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-06T14:40:08.945Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-06T14:40:08.950Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-06T14:40:08.956Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T14:40:12.315Z [INFO]: POST /addresses request received {"context":"AddressController"}
+2025-04-06T14:40:12.315Z [INFO]: Creating new address: {"address":"fdghfdhg"} {"context":"AddressService"}
+2025-04-06T14:40:12.356Z [ERROR]: relation "address_schema.address" does not exist {"trace":"QueryFailedError: relation \"address_schema.address\" does not exist\n    at PostgresQueryRunner.query (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\driver\\src\\driver\\postgres\\PostgresQueryRunner.ts:328:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async InsertQueryBuilder.execute (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\InsertQueryBuilder.ts:163:33)\n    at async SubjectExecutor.executeInsertOperations (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\persistence\\src\\persistence\\SubjectExecutor.ts:435:42)\n    at async SubjectExecutor.execute (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\persistence\\src\\persistence\\SubjectExecutor.ts:137:9)\n    at async EntityPersistExecutor.execute (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\persistence\\src\\persistence\\EntityPersistExecutor.ts:182:21)\n    at async AddressService.create (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\src\\address\\address.service.ts:31:26)\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:46:28\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:17","context":"ExceptionsHandler"}
+2025-04-06T14:40:14.396Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T14:40:14.397Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T14:40:14.414Z [ERROR]: relation "address_schema.address" does not exist {"trace":"QueryFailedError: relation \"address_schema.address\" does not exist\n    at PostgresQueryRunner.query (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\driver\\src\\driver\\postgres\\PostgresQueryRunner.ts:328:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async SelectQueryBuilder.loadRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3801:25)\n    at async SelectQueryBuilder.executeEntitiesAndRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3547:26)\n    at async SelectQueryBuilder.getRawAndEntities (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1671:29)\n    at async SelectQueryBuilder.getMany (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1761:25)\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:46:28\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:17","context":"ExceptionsHandler"}
+2025-04-06T14:40:19.383Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T14:40:19.384Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T14:40:19.390Z [ERROR]: relation "address_schema.address" does not exist {"trace":"QueryFailedError: relation \"address_schema.address\" does not exist\n    at PostgresQueryRunner.query (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\driver\\src\\driver\\postgres\\PostgresQueryRunner.ts:328:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async SelectQueryBuilder.loadRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3801:25)\n    at async SelectQueryBuilder.executeEntitiesAndRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3547:26)\n    at async SelectQueryBuilder.getRawAndEntities (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1671:29)\n    at async SelectQueryBuilder.getMany (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1761:25)\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:46:28\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:17","context":"ExceptionsHandler"}
+2025-04-06T15:04:29.653Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-06T15:04:29.660Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-06T15:04:29.660Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-06T15:04:29.662Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-06T15:04:29.662Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-06T15:04:29.663Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-06T15:04:29.664Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-06T15:04:29.664Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-06T15:04:29.665Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-06T15:04:29.668Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-06T15:04:29.673Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T15:05:29.281Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T15:05:29.281Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T15:05:29.367Z [ERROR]: relation "address_schema.address" does not exist {"trace":"QueryFailedError: relation \"address_schema.address\" does not exist\n    at PostgresQueryRunner.query (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\driver\\src\\driver\\postgres\\PostgresQueryRunner.ts:328:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async SelectQueryBuilder.loadRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3801:25)\n    at async SelectQueryBuilder.executeEntitiesAndRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3547:26)\n    at async SelectQueryBuilder.getRawAndEntities (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1671:29)\n    at async SelectQueryBuilder.getMany (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1761:25)\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:46:28\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:17","context":"ExceptionsHandler"}
+2025-04-06T16:43:08.765Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-06T16:43:08.770Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-06T16:43:08.771Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-06T16:43:08.772Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-06T16:43:08.772Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-06T16:43:08.773Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-06T16:43:08.774Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-06T16:43:08.775Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-06T16:43:08.776Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-06T16:43:08.779Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-06T16:43:08.784Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T16:43:48.323Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T16:43:48.324Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T16:43:48.621Z [ERROR]: relation "address_schema.address" does not exist {"trace":"QueryFailedError: relation \"address_schema.address\" does not exist\n    at PostgresQueryRunner.query (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\driver\\src\\driver\\postgres\\PostgresQueryRunner.ts:328:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async SelectQueryBuilder.loadRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3801:25)\n    at async SelectQueryBuilder.executeEntitiesAndRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3547:26)\n    at async SelectQueryBuilder.getRawAndEntities (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1671:29)\n    at async SelectQueryBuilder.getMany (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1761:25)\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:46:28\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:17","context":"ExceptionsHandler"}
+2025-04-06T16:46:56.623Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T16:46:56.624Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T16:46:56.655Z [ERROR]: relation "address_schema.address" does not exist {"trace":"QueryFailedError: relation \"address_schema.address\" does not exist\n    at PostgresQueryRunner.query (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\driver\\src\\driver\\postgres\\PostgresQueryRunner.ts:328:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async SelectQueryBuilder.loadRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3801:25)\n    at async SelectQueryBuilder.executeEntitiesAndRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3547:26)\n    at async SelectQueryBuilder.getRawAndEntities (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1671:29)\n    at async SelectQueryBuilder.getMany (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1761:25)\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:46:28\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:17","context":"ExceptionsHandler"}
+2025-04-06T17:03:32.170Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-06T17:03:32.176Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:03:32.176Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-06T17:03:32.177Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-06T17:03:32.178Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:03:32.179Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:03:32.180Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-06T17:03:32.180Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-06T17:03:32.181Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:03:32.185Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-06T17:03:32.189Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T17:03:38.374Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:03:38.375Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:03:38.416Z [ERROR]: relation "address.address" does not exist {"trace":"QueryFailedError: relation \"address.address\" does not exist\n    at PostgresQueryRunner.query (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\driver\\src\\driver\\postgres\\PostgresQueryRunner.ts:328:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async SelectQueryBuilder.loadRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3801:25)\n    at async SelectQueryBuilder.executeEntitiesAndRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3547:26)\n    at async SelectQueryBuilder.getRawAndEntities (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1671:29)\n    at async SelectQueryBuilder.getMany (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1761:25)\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:46:28\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:17","context":"ExceptionsHandler"}
+2025-04-06T17:03:39.518Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:03:39.518Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:03:39.524Z [ERROR]: relation "address.address" does not exist {"trace":"QueryFailedError: relation \"address.address\" does not exist\n    at PostgresQueryRunner.query (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\driver\\src\\driver\\postgres\\PostgresQueryRunner.ts:328:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async SelectQueryBuilder.loadRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3801:25)\n    at async SelectQueryBuilder.executeEntitiesAndRawResults (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:3547:26)\n    at async SelectQueryBuilder.getRawAndEntities (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1671:29)\n    at async SelectQueryBuilder.getMany (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\SelectQueryBuilder.ts:1761:25)\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:46:28\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:17","context":"ExceptionsHandler"}
+2025-04-06T17:07:49.792Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-06T17:07:49.798Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:07:49.798Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-06T17:07:49.799Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-06T17:07:49.800Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:07:49.801Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:07:49.801Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-06T17:07:49.802Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-06T17:07:49.803Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:07:49.807Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-06T17:07:49.813Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T17:07:55.138Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:07:55.139Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:15:49.674Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:15:49.676Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:16:04.994Z [INFO]: POST /addresses request received {"context":"AddressController"}
+2025-04-06T17:16:04.995Z [INFO]: Creating new address: {"address":"Nefelejcs utca, 35"} {"context":"AddressService"}
+2025-04-06T17:16:05.047Z [INFO]: Address created with ID: fee7335e-ff6c-4bdf-9487-ac57eb252ad5 {"context":"AddressService"}
+2025-04-06T17:16:05.082Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:16:05.083Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:16:39.821Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:16:39.822Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:17:04.646Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:17:04.646Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:17:07.047Z [INFO]: GET /addresses/fee7335e-ff6c-4bdf-9487-ac57eb252ad5 request received {"context":"AddressController"}
+2025-04-06T17:17:07.048Z [INFO]: Fetching address with ID: fee7335e-ff6c-4bdf-9487-ac57eb252ad5 {"context":"AddressService"}
+2025-04-06T17:17:09.517Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:17:09.518Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:17:11.000Z [INFO]: GET /addresses/fee7335e-ff6c-4bdf-9487-ac57eb252ad5 request received {"context":"AddressController"}
+2025-04-06T17:17:11.000Z [INFO]: Fetching address with ID: fee7335e-ff6c-4bdf-9487-ac57eb252ad5 {"context":"AddressService"}
+2025-04-06T17:17:15.694Z [INFO]: PUT /addresses/fee7335e-ff6c-4bdf-9487-ac57eb252ad5 request received {"context":"AddressController"}
+2025-04-06T17:17:15.695Z [INFO]: Updating address with ID: fee7335e-ff6c-4bdf-9487-ac57eb252ad5 {"context":"AddressService"}
+2025-04-06T17:17:15.695Z [INFO]: Fetching address with ID: fee7335e-ff6c-4bdf-9487-ac57eb252ad5 {"context":"AddressService"}
+2025-04-06T17:17:15.713Z [INFO]: Address with ID: fee7335e-ff6c-4bdf-9487-ac57eb252ad5 updated successfully {"context":"AddressService"}
+2025-04-06T17:17:15.751Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:17:15.752Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:17:57.070Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:17:57.071Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:18:04.707Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:18:04.707Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:18:10.573Z [INFO]: DELETE /addresses/fee7335e-ff6c-4bdf-9487-ac57eb252ad5 request received {"context":"AddressController"}
+2025-04-06T17:18:10.573Z [INFO]: Removing address with ID: fee7335e-ff6c-4bdf-9487-ac57eb252ad5 {"context":"AddressService"}
+2025-04-06T17:18:10.573Z [INFO]: Fetching address with ID: fee7335e-ff6c-4bdf-9487-ac57eb252ad5 {"context":"AddressService"}
+2025-04-06T17:18:10.589Z [INFO]: Address with ID: fee7335e-ff6c-4bdf-9487-ac57eb252ad5 removed successfully {"context":"AddressService"}
+2025-04-06T17:22:59.875Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:22:59.877Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:23:07.903Z [INFO]: POST /addresses request received {"context":"AddressController"}
+2025-04-06T17:23:07.903Z [INFO]: Creating new address: {"address":"Nefelejcs utca, 35"} {"context":"AddressService"}
+2025-04-06T17:23:07.913Z [INFO]: Address created with ID: 9a7ea713-3275-433c-a231-b74fd91712ae {"context":"AddressService"}
+2025-04-06T17:23:07.942Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:23:07.942Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:23:14.161Z [INFO]: GET /addresses/9a7ea713-3275-433c-a231-b74fd91712ae request received {"context":"AddressController"}
+2025-04-06T17:23:14.161Z [INFO]: Fetching address with ID: 9a7ea713-3275-433c-a231-b74fd91712ae {"context":"AddressService"}
+2025-04-06T17:23:16.918Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:23:16.918Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:23:19.220Z [INFO]: GET /addresses/9a7ea713-3275-433c-a231-b74fd91712ae request received {"context":"AddressController"}
+2025-04-06T17:23:19.221Z [INFO]: Fetching address with ID: 9a7ea713-3275-433c-a231-b74fd91712ae {"context":"AddressService"}
+2025-04-06T17:23:21.456Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:23:21.457Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:23:48.769Z [INFO]: POST /addresses request received {"context":"AddressController"}
+2025-04-06T17:23:48.770Z [INFO]: Creating new address: {"address":"Harcsa utca, 28."} {"context":"AddressService"}
+2025-04-06T17:23:48.795Z [INFO]: Address created with ID: 3eb68b24-fbf3-4a01-a590-919e145461e3 {"context":"AddressService"}
+2025-04-06T17:23:48.829Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:23:48.829Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:24:14.622Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:24:14.622Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-06T17:24:45.623Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-06T17:24:45.630Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:24:45.631Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-06T17:24:45.633Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-06T17:24:45.635Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:24:45.637Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:24:45.639Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-06T17:24:45.641Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-06T17:24:45.642Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:24:45.647Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-06T17:24:45.654Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T17:24:49.521Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-06T17:24:49.526Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:24:49.527Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-06T17:24:49.528Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-06T17:24:49.529Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:24:49.530Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:24:49.531Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-06T17:24:49.531Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-06T17:24:49.532Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-06T17:24:49.535Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-06T17:24:49.539Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}

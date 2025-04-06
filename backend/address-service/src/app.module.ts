@@ -24,7 +24,6 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         username: configService.get('DB_USERNAME', 'postgres'),
         password: configService.get('DB_PASSWORD', 'postgres'),
         database: configService.get('DB_DATABASE', 'syscode_db'),
-        schema: 'address_schema', // Használjuk az address_schema sémát
         entities: [Address],
         synchronize: false, // Liquibase-t használunk, ezért ezt kikapcsoljuk
       }),
