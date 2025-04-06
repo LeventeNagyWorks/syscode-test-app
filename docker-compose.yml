@@ -16,6 +16,16 @@ services:
     networks:
       - app-network
 
+  liquibase:
+    image: liquibase/liquibase
+    volumes:
+      - ./backend/db:/liquibase/changelog
+    command: --defaultsFile=/liquibase/changelog/liquibase.properties update
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+
   # Profile microservice
   profile-service:
     build:

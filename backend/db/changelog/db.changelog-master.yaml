@@ -1,0 +1,12 @@
+databaseChangeLog:
+  # Profile service változtatásai
+  - include:
+      file: profile-service/db.changelog-1.0.yaml
+  - include:
+      file: db/changelog/changes/create-profile-schema.yaml
+      
+  # Address service változtatásai
+  - include:
+        file: address-service/db.changelog-1.0.yaml
+  - include:
+      file: db/changelog/changes/create-address-schema.yaml

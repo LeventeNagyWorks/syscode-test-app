@@ -12,7 +12,7 @@ export class BasicStrategy extends PassportStrategy(Strategy) {
   validate(username: string, password: string): any {
     // Itt egyszerű felhasználónév/jelszó ellenőrzés
     // Valós alkalmazásban ez adatbázisból jönne
-    if (username === 'admin' && password === 'password') {
+    if (username === 'admin' && password === 'admin') {
       return { userId: 1, username: username };
     }
     throw new UnauthorizedException();

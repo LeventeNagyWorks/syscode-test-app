@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-address-schema-and-table
+      author: developer
+      changes:
+        - createSchema:
+            schemaName: address_schema
+        - createTable:
+            schemaName: address_schema
+            tableName: address
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  defaultValueComputed: gen_random_uuid()
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: address
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  constraints:
+                    nullable: false

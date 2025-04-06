@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule],
   template: `
-    <div class="min-h-screen bg-gray-50">
+    <div class="min-h-screen bg-white">
       <!-- Navigation Header -->
       <nav class="bg-white shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,20 +39,12 @@ import { CommonModule } from '@angular/common';
       </nav>
 
       <!-- Main Content -->
-      <div class="py-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="py-6 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white">
           <router-outlet />
         </div>
       </div>
 
-      <!-- Footer -->
-      <footer class="bg-white">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <p class="text-center text-sm text-gray-500">
-            © 2023 Address Management App. All rights reserved.
-          </p>
-        </div>
-      </footer>
     </div>
   `
 })

@@ -1,0 +1,66 @@
+databaseChangeLog:
+  - changeSet:
+      id: "1"
+      author: developer
+      changes:
+        # Séma létrehozása a profile-service számára
+        - sql:
+            sql: CREATE SCHEMA IF NOT EXISTS profile_schema;
+            
+        # Profiles tábla létrehozása
+        - createTable:
+            schemaName: profile_schema
+            tableName: profiles
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: created_at
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  defaultValueComputed: CURRENT_TIMESTAMP
+                  
+  # Opcionális: Kezdeti adatok beszúrása
+  - changeSet:
+      id: "2"
+      author: developer
+      changes:
+        - insert:
+            schemaName: profile_schema
+            tableName: profiles
+            columns:
+              - column:
+                  name: id
+                  value: "550e8400-e29b-41d4-a716-446655440000"
+              - column:
+                  name: first_name
+                  value: "John"
+              - column:
+                  name: last_name
+                  value: "Doe"
+              - column:
+                  name: email
+                  value: "john.doe@example.com"
