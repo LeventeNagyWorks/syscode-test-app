@@ -234,3 +234,5 @@
 2025-04-06T17:24:49.532Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
 2025-04-06T17:24:49.535Z [INFO]: Nest application successfully started {"context":"NestApplication"}
 2025-04-06T17:24:49.539Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-06T17:32:35.477Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-06T17:32:35.478Z [INFO]: Fetching all addresses {"context":"AddressService"}

@@ -16,9 +16,9 @@ export const routes: Routes = [
   { path: 'addresses/:id/edit', component: AddressFormComponent },
   
   { path: 'students', component:  StudentListComponent },
-  { path: 'students/new', component: AddressFormComponent },
+  { path: 'students/new', component: StudentFormComponent },
   { path: 'students/:id', component: StudentDetailComponent },
   { path: 'students/:id/edit', component: StudentFormComponent },
-  
+
   { path: '**', redirectTo: '' },
 ];
