@@ -28,6 +28,7 @@ let AddressService = class AddressService {
         this.logger.log(`Creating new address: ${JSON.stringify(createAddressDto)}`, 'AddressService');
         const address = this.addressRepository.create({
             ...createAddressDto,
+            id: (0, uuid_1.v4)(),
         });
         const savedAddress = await this.addressRepository.save(address);
         this.logger.log(`Address created with ID: ${savedAddress.id}`, 'AddressService');

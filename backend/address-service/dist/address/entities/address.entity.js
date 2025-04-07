@@ -23,6 +23,6 @@ __decorate([
     __metadata("design:type", String)
 ], Address.prototype, "address", void 0);
 exports.Address = Address = __decorate([
-    (0, typeorm_1.Entity)()
+    (0, typeorm_1.Entity)('addresses')
 ], Address);
 //# sourceMappingURL=address.entity.js.map

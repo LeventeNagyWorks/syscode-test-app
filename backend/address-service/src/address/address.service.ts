@@ -25,9 +25,13 @@ export class AddressService {
       `Creating new address: ${JSON.stringify(createAddressDto)}`,
       'AddressService',
     );
+
+    // Create a new address entity and explicitly set the UUID
     const address = this.addressRepository.create({
       ...createAddressDto,
+      id: uuidv4(), // Explicitly set the UUID
     });
+
     const savedAddress = await this.addressRepository.save(address);
     this.logger.log(
       `Address created with ID: ${savedAddress.id}`,
@@ -86,19 +90,15 @@ export class AddressService {
     const streets = ['Main St', 'Broadway', 'Park Ave', 'Oak St', 'Maple Ave'];
     const cities = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix'];
     const states = ['NY', 'CA', 'IL', 'TX', 'AZ'];
-
     const streetNumber = Math.floor(Math.random() * 1000) + 1;
     const street = streets[Math.floor(Math.random() * streets.length)];
     const city = cities[Math.floor(Math.random() * cities.length)];
     const state = states[Math.floor(Math.random() * states.length)];
     const zipCode = Math.floor(Math.random() * 90000) + 10000;
-
     const randomAddress = `${streetNumber} ${street}, ${city}, ${state} ${zipCode}`;
-
     const address = new Address();
     address.id = uuidv4();
     address.address = randomAddress;
-
     this.logger.log(
       `Random address generated: ${randomAddress}`,
       'AddressService',
