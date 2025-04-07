@@ -53,6 +53,14 @@ let AddressController = class AddressController {
         this.logger.log(`DELETE /addresses/${id} request received`, 'AddressController');
         return this.addressService.remove(id);
     }
+    findByProfileId(profileId, page = 1, limit = 100) {
+        this.logger.log(`GET /addresses/profile/${profileId} request received`, 'AddressController');
+        return this.addressService.findByProfileId(profileId, page, limit);
+    }
+    findOneByProfileId(profileId) {
+        this.logger.log(`GET /addresses/profile/${profileId}/single request received`, 'AddressController');
+        return this.addressService.findOneByProfileId(profileId);
+    }
 };
 exports.AddressController = AddressController;
 __decorate([
@@ -111,6 +119,24 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], AddressController.prototype, "remove", null);
+__decorate([
+    (0, common_1.Get)('profile/:profileId'),
+    (0, common_1.UseGuards)(basic_auth_guard_1.BasicAuthGuard),
+    __param(0, (0, common_1.Param)('profileId')),
+    __param(1, (0, common_1.Query)('page')),
+    __param(2, (0, common_1.Query)('limit')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Number, Number]),
+    __metadata("design:returntype", Promise)
+], AddressController.prototype, "findByProfileId", null);
+__decorate([
+    (0, common_1.Get)('profile/:profileId/single'),
+    (0, common_1.UseGuards)(basic_auth_guard_1.BasicAuthGuard),
+    __param(0, (0, common_1.Param)('profileId')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], AddressController.prototype, "findOneByProfileId", null);
 exports.AddressController = AddressController = __decorate([
     (0, common_1.Controller)('addresses'),
     __metadata("design:paramtypes", [address_service_1.AddressService,

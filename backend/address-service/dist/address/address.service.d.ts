@@ -13,5 +13,7 @@ export declare class AddressService {
     findOne(id: string): Promise<Address>;
     update(id: string, updateAddressDto: UpdateAddressDto): Promise<Address>;
     remove(id: string): Promise<void>;
+    findByProfileId(profileId: string, page?: number, limit?: number): Promise<Address[]>;
+    findOneByProfileId(profileId: string): Promise<Address>;
     generateRandomAddress(): Address;
 }

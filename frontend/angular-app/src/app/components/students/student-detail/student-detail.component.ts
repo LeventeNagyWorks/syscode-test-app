@@ -125,9 +125,9 @@ export class StudentDetailComponent implements OnInit {
 
   loadAddress(): void {
     this.addressLoading = true;
-    // Assuming the address ID is the same as the student ID for simplicity
-    // In a real application, you might need to fetch the address ID from the student data
-    this.addressService.getAddress(this.studentId).subscribe({
+    
+    // Use the student ID as the profile ID to fetch the address
+    this.addressService.getAddressByProfileId(this.studentId).subscribe({
       next: (data) => {
         this.address = data;
         this.addressLoading = false;
@@ -138,7 +138,7 @@ export class StudentDetailComponent implements OnInit {
         // Not setting error here as address might not exist for all students
       }
     });
-  }
+  }  
 
   goBack(): void {
     this.router.navigate(['/students']);

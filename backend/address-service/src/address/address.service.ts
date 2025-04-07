@@ -95,6 +95,45 @@ export class AddressService {
     );
   }
 
+  async findByProfileId(
+    profileId: string,
+    page: number = 1,
+    limit: number = 100,
+  ): Promise<Address[]> {
+    this.logger.log(
+      `Fetching addresses for profile ID: ${profileId}`,
+      'AddressService',
+    );
+    const skip = (page - 1) * limit;
+    return this.addressRepository.find({
+      where: { profileId },
+      skip,
+      take: limit,
+      order: { id: 'ASC' },
+    });
+  }
+
+  async findOneByProfileId(profileId: string): Promise<Address> {
+    this.logger.log(
+      `Fetching address for profile ID: ${profileId}`,
+      'AddressService',
+    );
+    const address = await this.addressRepository.findOne({
+      where: { profileId },
+    });
+    if (!address) {
+      this.logger.error(
+        `Address with profile ID ${profileId} not found`,
+        '',
+        'AddressService',
+      );
+      throw new NotFoundException(
+        `Address with profile ID ${profileId} not found`,
+      );
+    }
+    return address;
+  }
+
   // Opcionális: Random cím generálása
   generateRandomAddress(): Address {
     this.logger.log('Generating random address', 'AddressService');

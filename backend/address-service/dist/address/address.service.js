@@ -70,6 +70,27 @@ let AddressService = class AddressService {
         await this.addressRepository.remove(address);
         this.logger.log(`Address with ID: ${id} removed successfully`, 'AddressService');
     }
+    async findByProfileId(profileId, page = 1, limit = 100) {
+        this.logger.log(`Fetching addresses for profile ID: ${profileId}`, 'AddressService');
+        const skip = (page - 1) * limit;
+        return this.addressRepository.find({
+            where: { profileId },
+            skip,
+            take: limit,
+            order: { id: 'ASC' },
+        });
+    }
+    async findOneByProfileId(profileId) {
+        this.logger.log(`Fetching address for profile ID: ${profileId}`, 'AddressService');
+        const address = await this.addressRepository.findOne({
+            where: { profileId },
+        });
+        if (!address) {
+            this.logger.error(`Address with profile ID ${profileId} not found`, '', 'AddressService');
+            throw new common_1.NotFoundException(`Address with profile ID ${profileId} not found`);
+        }
+        return address;
+    }
     generateRandomAddress() {
         this.logger.log('Generating random address', 'AddressService');
         const streets = ['Main St', 'Broadway', 'Park Ave', 'Oak St', 'Maple Ave'];

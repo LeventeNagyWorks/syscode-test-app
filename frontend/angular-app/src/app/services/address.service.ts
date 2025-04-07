@@ -63,4 +63,22 @@ export class AddressService {
       headers: this.createAuthHeaders()
     });
   }
+
+  getAddressesByProfileId(profileId: string, page: number = 1, pageSize: number = 100): Observable<Address[]> {
+    const params = new HttpParams()
+      .set('page', page.toString())
+      .set('limit', pageSize.toString());
+      
+    return this.http.get<Address[]>(`${this.apiUrl}/profile/${profileId}`, {
+      params,
+      headers: this.createAuthHeaders()
+    });
+  }
+
+  getAddressByProfileId(profileId: string): Observable<Address> {
+    return this.http.get<Address>(`${this.apiUrl}/profile/${profileId}/single`, {
+      headers: this.createAuthHeaders()
+    });
+  }
+
 }

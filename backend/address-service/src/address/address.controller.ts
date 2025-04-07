@@ -98,4 +98,28 @@ export class AddressController {
     );
     return this.addressService.remove(id);
   }
+
+  @Get('profile/:profileId')
+  @UseGuards(BasicAuthGuard)
+  findByProfileId(
+    @Param('profileId') profileId: string,
+    @Query('page') page: number = 1,
+    @Query('limit') limit: number = 100,
+  ): Promise<Address[]> {
+    this.logger.log(
+      `GET /addresses/profile/${profileId} request received`,
+      'AddressController',
+    );
+    return this.addressService.findByProfileId(profileId, page, limit);
+  }
+
+  @Get('profile/:profileId/single')
+  @UseGuards(BasicAuthGuard)
+  findOneByProfileId(@Param('profileId') profileId: string): Promise<Address> {
+    this.logger.log(
+      `GET /addresses/profile/${profileId}/single request received`,
+      'AddressController',
+    );
+    return this.addressService.findOneByProfileId(profileId);
+  }
 }

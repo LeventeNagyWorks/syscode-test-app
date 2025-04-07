@@ -42,12 +42,12 @@ function generateStudent() {
 }
 
 // Generate a random address
-function generateAddress(studentId) {
-  return {
-    studentId: studentId,
-    address: `${Math.floor(Math.random() * 1000) + 1} ${['Main', 'Oak', 'Maple', 'Pine', 'Cedar'][Math.floor(Math.random() * 5)]} St, ${['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix'][Math.floor(Math.random() * 5)]}, ${['NY', 'CA', 'IL', 'TX', 'AZ'][Math.floor(Math.random() * 5)]} ${Math.floor(Math.random() * 90000) + 10000}`
-  };
-}
+function generateAddress(profileId) {
+    return {
+      profileId: profileId,  // Changed from studentId to profileId
+      address: `${Math.floor(Math.random() * 1000) + 1} ${['Main', 'Oak', 'Maple', 'Pine', 'Cedar'][Math.floor(Math.random() * 5)]} St, ${['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix'][Math.floor(Math.random() * 5)]}, ${['NY', 'CA', 'IL', 'TX', 'AZ'][Math.floor(Math.random() * 5)]} ${Math.floor(Math.random() * 90000) + 10000}`
+    };
+  }  
 
 // Create a student and its address
 async function createStudentAndAddress() {

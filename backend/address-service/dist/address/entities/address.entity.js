@@ -22,6 +22,10 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Address.prototype, "address", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ name: 'profile_id', nullable: true }),
+    __metadata("design:type", String)
+], Address.prototype, "profileId", void 0);
 exports.Address = Address = __decorate([
     (0, typeorm_1.Entity)('addresses')
 ], Address);

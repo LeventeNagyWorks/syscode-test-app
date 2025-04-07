@@ -24,28 +24,10 @@ databaseChangeLog:
                   type: varchar(255)
                   constraints:
                     nullable: false
-                    unique: true
-                    
-  # Add sample student data
-  - changeSet:
-      id: "2"
-      author: developer
-      changes:
-        - insert:
-            tableName: students
-            columns:
-              - column:
-                  name: id
-                  value: "550e8400-e29b-41d4-a716-446655440000"
-              - column:
-                  name: name
-                  value: "John Doe"
-              - column:
-                  name: email
-                  value: "john.doe@example.com"
+                    unique: true 
 
   - changeSet:
-      id: "3"
+      id: "2"
       author: developer
       changes:
         - addDefaultValue:
