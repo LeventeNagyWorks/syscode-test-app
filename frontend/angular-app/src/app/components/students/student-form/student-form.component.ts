@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { ActivatedRoute, Router } from '@angular/router';
 import { StudentService } from '../../../services/student.service';
 import { Student } from '../../../models/student.model';
+import { ToastService } from '../../../services/toast.service';
 
 @Component({
   selector: 'app-student-form',
@@ -87,7 +88,8 @@ export class StudentFormComponent implements OnInit {
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    private studentService: StudentService
+    private studentService: StudentService,
+    private toastService: ToastService // Injektáljuk a ToastService-t
   ) {}
 
   ngOnInit(): void {
@@ -101,8 +103,8 @@ export class StudentFormComponent implements OnInit {
     }
   }
 
-  get f() { 
-    return this.studentForm.controls; 
+  get f() {
+    return this.studentForm.controls;
   }
 
   initForm(): void {
@@ -126,13 +128,13 @@ export class StudentFormComponent implements OnInit {
         this.error = 'Failed to load student. Please try again later.';
         console.error('Error loading student:', err);
         this.loading = false;
+        this.toastService.error('Failed to load student. Please try again later.'); // Toast hibaüzenet
       }
     });
   }
 
   onSubmit(): void {
     this.submitted = true;
-
     if (this.studentForm.invalid) {
       return;
     }
@@ -147,23 +149,27 @@ export class StudentFormComponent implements OnInit {
     if (this.isEditMode) {
       this.studentService.updateStudent(this.studentId, studentData).subscribe({
         next: () => {
+          this.toastService.success(`Student "${studentData.name}" has been updated successfully.`); // Sikeres frissítés toast
           this.router.navigate(['/students']);
         },
         error: (err) => {
           this.error = 'Failed to update student. Please try again later.';
           console.error('Error updating student:', err);
           this.loading = false;
+          this.toastService.error('Failed to update student. Please try again later.'); // Sikertelen frissítés toast
         }
       });
     } else {
       this.studentService.createStudent(studentData).subscribe({
         next: () => {
+          this.toastService.success(`Student "${studentData.name}" has been created successfully.`); // Sikeres létrehozás toast
           this.router.navigate(['/students']);
         },
         error: (err) => {
           this.error = 'Failed to create student. Please try again later.';
           console.error('Error creating student:', err);
           this.loading = false;
+          this.toastService.error('Failed to create student. Please try again later.'); // Sikertelen létrehozás toast
         }
       });
     }

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ToastComponent } from './components/toast.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, CommonModule, ToastComponent],
   template: `
     <div class="min-h-screen bg-white selection:text-white selection:bg-indigo-500">
       <!-- Navigation Header -->
@@ -49,6 +50,7 @@ import { CommonModule } from '@angular/common';
       <div class="py-6 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white">
           <router-outlet />
+          <app-toast></app-toast>
         </div>
       </div>
 

@@ -5,6 +5,7 @@ import { StudentService } from '../../../services/student.service';
 import { Student } from '../../../models/student.model';
 import { PaginationComponent } from '../../pagination.component';
 import { ConfirmationDialogComponent } from '../../confirmation-dialog.component';
+import { ToastService } from '../../../services/toast.service';
 
 @Component({
   selector: 'app-student-list',
@@ -92,13 +93,15 @@ export class StudentListComponent implements OnInit {
   currentPage = 1;
   pageSize = 100;
   totalItems = 0;
-
   // For delete confirmation dialog
   showDeleteConfirmation = false;
   studentToDelete: string | null = null;
   deleteConfirmationMessage = '';
 
-  constructor(private studentService: StudentService) {}
+  constructor(
+    private studentService: StudentService,
+    private toastService: ToastService // Injektáljuk a ToastService-t
+  ) {}
 
   ngOnInit(): void {
     this.loadStudents();
@@ -116,6 +119,7 @@ export class StudentListComponent implements OnInit {
         this.error = 'Failed to load students. Please try again later.';
         console.error('Error loading students:', err);
         this.loading = false;
+        this.toastService.error('Failed to load students. Please try again later.'); // Toast hibaüzenet
       }
     });
   }
@@ -127,6 +131,7 @@ export class StudentListComponent implements OnInit {
       },
       error: (err) => {
         console.error('Error loading student count:', err);
+        this.toastService.error('Failed to load student count.'); // Toast hibaüzenet
       }
     });
   }
@@ -140,6 +145,7 @@ export class StudentListComponent implements OnInit {
   confirmDelete(): void {
     if (this.studentToDelete) {
       const idToDelete = this.studentToDelete;
+      const studentName = this.students.find(s => s.id === idToDelete)?.name || 'Student';
       this.studentToDelete = null;
       this.showDeleteConfirmation = false; // Make sure to close the dialog
       
@@ -154,38 +160,20 @@ export class StudentListComponent implements OnInit {
             // Reload current page to ensure we have the right number of items
             this.loadStudents();
           }
+          this.toastService.success(`Student "${studentName}" has been deleted successfully.`); // Sikeres törlés toast
         },
         error: (err) => {
           this.error = 'Failed to delete student. Please try again later.';
           console.error('Error deleting student:', err);
+          this.toastService.error('Failed to delete student. Please try again later.'); // Sikertelen törlés toast
         }
       });
     }
   }
-  
+ 
   cancelDelete(): void {
     this.studentToDelete = null;
     this.showDeleteConfirmation = false; // Make sure to close the dialog
-  }
-
-  deleteStudent(id: string): void {
-    this.studentService.deleteStudent(id).subscribe({
-      next: () => {
-        this.students = this.students.filter(student => student.id !== id);
-        this.totalItems--;
-        // If we deleted the last item on the page, go to previous page
-        if (this.students.length === 0 && this.currentPage > 1) {
-          this.onPageChange(this.currentPage - 1);
-        } else {
-          // Reload current page to ensure we have the right number of items
-          this.loadStudents();
-        }
-      },
-      error: (err) => {
-        this.error = 'Failed to delete student. Please try again later.';
-        console.error('Error deleting student:', err);
-      }
-    });
   }
 
   onPageChange(page: number): void {

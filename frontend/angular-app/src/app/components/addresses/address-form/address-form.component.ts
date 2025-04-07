@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { ActivatedRoute, Router } from '@angular/router';
 import { AddressService } from '../../../services/address.service';
 import { Address } from '../../../models/address.model';
+import { ToastService } from '../../../services/toast.service';
 
 @Component({
   selector: 'app-address-form',
@@ -72,7 +73,8 @@ export class AddressFormComponent implements OnInit {
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    private addressService: AddressService
+    private addressService: AddressService,
+    private toastService: ToastService // Injektáljuk a ToastService-t
   ) {}
 
   ngOnInit(): void {
@@ -86,8 +88,8 @@ export class AddressFormComponent implements OnInit {
     }
   }
 
-  get f() { 
-    return this.addressForm.controls; 
+  get f() {
+    return this.addressForm.controls;
   }
 
   initForm(): void {
@@ -109,17 +111,16 @@ export class AddressFormComponent implements OnInit {
         this.error = 'Failed to load address. Please try again later.';
         console.error('Error loading address:', err);
         this.loading = false;
+        this.toastService.error('Failed to load address. Please try again later.'); // Toast hibaüzenet
       }
     });
   }
 
   onSubmit(): void {
     this.submitted = true;
-
     if (this.addressForm.invalid) {
       return;
     }
-
     this.loading = true;
     
     const addressData = {
@@ -129,23 +130,27 @@ export class AddressFormComponent implements OnInit {
     if (this.isEditMode) {
       this.addressService.updateAddress(this.addressId, addressData).subscribe({
         next: () => {
+          this.toastService.success(`Address "${addressData.address}" has been updated successfully.`); // Sikeres frissítés toast
           this.router.navigate(['/addresses']);
         },
         error: (err) => {
           this.error = 'Failed to update address. Please try again later.';
           console.error('Error updating address:', err);
           this.loading = false;
+          this.toastService.error('Failed to update address. Please try again later.'); // Sikertelen frissítés toast
         }
       });
     } else {
       this.addressService.createAddress(addressData).subscribe({
         next: () => {
+          this.toastService.success(`Address "${addressData.address}" has been created successfully.`); // Sikeres létrehozás toast
           this.router.navigate(['/addresses']);
         },
         error: (err) => {
           this.error = 'Failed to create address. Please try again later.';
           console.error('Error creating address:', err);
           this.loading = false;
+          this.toastService.error('Failed to create address. Please try again later.'); // Sikertelen létrehozás toast
         }
       });
     }

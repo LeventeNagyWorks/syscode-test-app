@@ -5,6 +5,7 @@ import { AddressService } from '../../../services/address.service';
 import { Address } from '../../../models/address.model';
 import { PaginationComponent } from '../../pagination.component';
 import { ConfirmationDialogComponent } from '../../confirmation-dialog.component';
+import { ToastService } from '../../../services/toast.service';
 
 @Component({
   selector: 'app-address-list',
@@ -86,19 +87,21 @@ import { ConfirmationDialogComponent } from '../../confirmation-dialog.component
 export class AddressListComponent implements OnInit {
   // Get a reference to the dialog component
   @ViewChild('confirmationDialog') confirmationDialog!: ConfirmationDialogComponent;
-  
+ 
   addresses: Address[] = [];
   loading = false;
   error = '';
   currentPage = 1;
   pageSize = 100;
   totalItems = 0;
-
   // For delete confirmation dialog
   addressToDelete: string | null = null;
   deleteConfirmationMessage = '';
 
-  constructor(private addressService: AddressService) {}
+  constructor(
+    private addressService: AddressService,
+    private toastService: ToastService // Injektáljuk a ToastService-t
+  ) {}
 
   ngOnInit(): void {
     this.loadAddresses();
@@ -116,6 +119,7 @@ export class AddressListComponent implements OnInit {
         this.error = 'Failed to load addresses. Please try again later.';
         console.error('Error loading addresses:', err);
         this.loading = false;
+        this.toastService.error('Failed to load addresses. Please try again later.'); // Toast hibaüzenet
       }
     });
   }
@@ -127,6 +131,7 @@ export class AddressListComponent implements OnInit {
       },
       error: (err) => {
         console.error('Error loading address count:', err);
+        this.toastService.error('Failed to load address count.'); // Toast hibaüzenet
       }
     });
   }
@@ -141,6 +146,7 @@ export class AddressListComponent implements OnInit {
   confirmDelete(): void {
     if (this.addressToDelete) {
       const idToDelete = this.addressToDelete;
+      const addressText = this.addresses.find(a => a.id === idToDelete)?.address || 'Address';
       this.addressToDelete = null;
       
       this.addressService.deleteAddress(idToDelete).subscribe({
@@ -154,10 +160,12 @@ export class AddressListComponent implements OnInit {
             // Reload current page to ensure we have the right number of items
             this.loadAddresses();
           }
+          this.toastService.success(`Address "${addressText}" has been deleted successfully.`); // Sikeres törlés toast
         },
         error: (err) => {
           this.error = 'Failed to delete address. Please try again later.';
           console.error('Error deleting address:', err);
+          this.toastService.error('Failed to delete address. Please try again later.'); // Sikertelen törlés toast
         }
       });
     }
