@@ -35,7 +35,9 @@ import { ToastService } from '../../../services/toast.service';
             [totalItems]="totalItems"
             (pageChange)="onPageChange($event)">
           </app-pagination>
-          <table *ngIf="addresses.length > 0" class="min-w-full divide-y divide-gray-200">
+          
+          <!-- Asztali nézet - táblázat -->
+          <table *ngIf="addresses.length > 0" class="min-w-full divide-y divide-gray-200 hidden md:table">
             <thead class="bg-gray-50">
               <tr>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
@@ -56,6 +58,32 @@ import { ToastService } from '../../../services/toast.service';
             </tbody>
           </table>
           
+          <!-- Mobil nézet - kártyák -->
+          <div class="grid grid-cols-1 gap-4 md:hidden">
+            <div *ngFor="let address of addresses" class="bg-white p-4 rounded-lg shadow">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-lg font-medium text-gray-900">{{ address.address }}</h3>
+                  <p class="text-xs text-gray-400 mt-1">ID: {{ address.id }}</p>
+                </div>
+                <div class="flex flex-col space-y-2">
+                  <a [routerLink]="['/addresses', address.id]" 
+                     class="px-3 py-1 bg-indigo-100 text-accent rounded-md text-sm text-center">
+                    View
+                  </a>
+                  <a [routerLink]="['/addresses', address.id, 'edit']" 
+                     class="px-3 py-1 bg-indigo-100 text-accent rounded-md text-sm text-center">
+                    Edit
+                  </a>
+                  <button (click)="openDeleteConfirmation(address.id, address.address)" 
+                          class="px-3 py-1 bg-red-100 text-red-600 rounded-md text-sm text-center">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div *ngIf="!loading && addresses.length === 0" class="text-center py-10">
             <p class="text-gray-500">No addresses found. Add a new address to get started.</p>
           </div>
@@ -71,7 +99,6 @@ import { ToastService } from '../../../services/toast.service';
         </div>
       </div>
     </div>
-
     <!-- Confirmation Dialog -->
     <app-confirmation-dialog
       #confirmationDialog
@@ -97,10 +124,10 @@ export class AddressListComponent implements OnInit {
   // For delete confirmation dialog
   addressToDelete: string | null = null;
   deleteConfirmationMessage = '';
-
+  
   constructor(
     private addressService: AddressService,
-    private toastService: ToastService // Injektáljuk a ToastService-t
+    private toastService: ToastService
   ) {}
 
   ngOnInit(): void {
@@ -119,7 +146,7 @@ export class AddressListComponent implements OnInit {
         this.error = 'Failed to load addresses. Please try again later.';
         console.error('Error loading addresses:', err);
         this.loading = false;
-        this.toastService.error('Failed to load addresses. Please try again later.'); // Toast hibaüzenet
+        this.toastService.error('Failed to load addresses. Please try again later.');
       }
     });
   }
@@ -131,7 +158,7 @@ export class AddressListComponent implements OnInit {
       },
       error: (err) => {
         console.error('Error loading address count:', err);
-        this.toastService.error('Failed to load address count.'); // Toast hibaüzenet
+        this.toastService.error('Failed to load address count.');
       }
     });
   }
@@ -160,12 +187,12 @@ export class AddressListComponent implements OnInit {
             // Reload current page to ensure we have the right number of items
             this.loadAddresses();
           }
-          this.toastService.success(`Address "${addressText}" has been deleted successfully.`); // Sikeres törlés toast
+          this.toastService.success(`Address "${addressText}" has been deleted successfully.`);
         },
         error: (err) => {
           this.error = 'Failed to delete address. Please try again later.';
           console.error('Error deleting address:', err);
-          this.toastService.error('Failed to delete address. Please try again later.'); // Sikertelen törlés toast
+          this.toastService.error('Failed to delete address. Please try again later.');
         }
       });
     }

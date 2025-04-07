@@ -36,7 +36,9 @@ import { ToastService } from '../../../services/toast.service';
             [totalItems]="totalItems"
             (pageChange)="onPageChange($event)">
           </app-pagination>
-          <table *ngIf="students.length > 0" class="min-w-full divide-y divide-gray-200">
+          
+          <!-- Asztali nézet - táblázat -->
+          <table *ngIf="students.length > 0" class="min-w-full divide-y divide-gray-200 hidden md:table">
             <thead class="bg-gray-50">
               <tr>
                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
@@ -59,6 +61,33 @@ import { ToastService } from '../../../services/toast.service';
             </tbody>
           </table>
           
+          <!-- Mobil nézet - kártyák -->
+          <div class="grid grid-cols-1 gap-4 md:hidden">
+            <div *ngFor="let student of students" class="bg-white p-4 rounded-lg shadow">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-lg font-medium text-gray-900">{{ student.name }}</h3>
+                  <p class="text-sm text-gray-500 mt-1">{{ student.email }}</p>
+                  <p class="text-xs text-gray-400 mt-1">ID: {{ student.id }}</p>
+                </div>
+                <div class="flex flex-col space-y-2">
+                  <a [routerLink]="['/students', student.id]" 
+                     class="px-3 py-1 bg-indigo-100 text-accent rounded-md text-sm text-center">
+                    View
+                  </a>
+                  <a [routerLink]="['/students', student.id, 'edit']" 
+                     class="px-3 py-1 bg-indigo-100 text-accent rounded-md text-sm text-center">
+                    Edit
+                  </a>
+                  <button (click)="openDeleteConfirmation(student.id, student.name)" 
+                          class="px-3 py-1 bg-red-100 text-red-600 rounded-md text-sm text-center">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div *ngIf="!loading && students.length === 0" class="text-center py-10">
             <p class="text-gray-500">No students found. Add a new student to get started.</p>
           </div>
@@ -73,7 +102,6 @@ import { ToastService } from '../../../services/toast.service';
         </div>
       </div>
     </div>
-
     <!-- Confirmation Dialog -->
     <app-confirmation-dialog
       [isOpen]="showDeleteConfirmation"
@@ -87,6 +115,7 @@ import { ToastService } from '../../../services/toast.service';
   `,
 })
 export class StudentListComponent implements OnInit {
+  // A komponens többi része változatlan marad
   students: Student[] = [];
   loading = false;
   error = '';
@@ -97,10 +126,10 @@ export class StudentListComponent implements OnInit {
   showDeleteConfirmation = false;
   studentToDelete: string | null = null;
   deleteConfirmationMessage = '';
-
+  
   constructor(
     private studentService: StudentService,
-    private toastService: ToastService // Injektáljuk a ToastService-t
+    private toastService: ToastService
   ) {}
 
   ngOnInit(): void {
@@ -119,7 +148,7 @@ export class StudentListComponent implements OnInit {
         this.error = 'Failed to load students. Please try again later.';
         console.error('Error loading students:', err);
         this.loading = false;
-        this.toastService.error('Failed to load students. Please try again later.'); // Toast hibaüzenet
+        this.toastService.error('Failed to load students. Please try again later.');
       }
     });
   }
@@ -131,7 +160,7 @@ export class StudentListComponent implements OnInit {
       },
       error: (err) => {
         console.error('Error loading student count:', err);
-        this.toastService.error('Failed to load student count.'); // Toast hibaüzenet
+        this.toastService.error('Failed to load student count.');
       }
     });
   }
@@ -147,25 +176,23 @@ export class StudentListComponent implements OnInit {
       const idToDelete = this.studentToDelete;
       const studentName = this.students.find(s => s.id === idToDelete)?.name || 'Student';
       this.studentToDelete = null;
-      this.showDeleteConfirmation = false; // Make sure to close the dialog
+      this.showDeleteConfirmation = false;
       
       this.studentService.deleteStudent(idToDelete).subscribe({
         next: () => {
           this.students = this.students.filter(student => student.id !== idToDelete);
           this.totalItems--;
-          // If we deleted the last item on the page, go to previous page
           if (this.students.length === 0 && this.currentPage > 1) {
             this.onPageChange(this.currentPage - 1);
           } else {
-            // Reload current page to ensure we have the right number of items
             this.loadStudents();
           }
-          this.toastService.success(`Student "${studentName}" has been deleted successfully.`); // Sikeres törlés toast
+          this.toastService.success(`Student "${studentName}" has been deleted successfully.`);
         },
         error: (err) => {
           this.error = 'Failed to delete student. Please try again later.';
           console.error('Error deleting student:', err);
-          this.toastService.error('Failed to delete student. Please try again later.'); // Sikertelen törlés toast
+          this.toastService.error('Failed to delete student. Please try again later.');
         }
       });
     }
@@ -173,13 +200,12 @@ export class StudentListComponent implements OnInit {
  
   cancelDelete(): void {
     this.studentToDelete = null;
-    this.showDeleteConfirmation = false; // Make sure to close the dialog
+    this.showDeleteConfirmation = false;
   }
 
   onPageChange(page: number): void {
     this.currentPage = page;
     this.loadStudents();
-    // Scroll to top of the page for better UX
     window.scrollTo(0, 0);
   }
 }
