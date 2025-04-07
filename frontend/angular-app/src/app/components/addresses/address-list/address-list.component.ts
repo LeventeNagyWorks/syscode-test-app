@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { AddressService } from '../../../services/address.service';
 import { Address } from '../../../models/address.model';
 import { PaginationComponent } from '../../pagination.component';
+import { ConfirmationDialogComponent } from '../../confirmation-dialog.component';
 
 @Component({
   selector: 'app-address-list',
   standalone: true,
-  imports: [CommonModule, RouterLink, PaginationComponent],
+  imports: [CommonModule, RouterLink, PaginationComponent, ConfirmationDialogComponent],
   template: `
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
       <div class="px-4 py-6 sm:px-0">
@@ -25,7 +26,6 @@ import { PaginationComponent } from '../../pagination.component';
           <span class="block sm:inline">{{ error }}</span>
         </div>
         <div class="overflow-x-auto">
-
           <app-pagination
             *ngIf="totalItems > 0"
             [isOnTop]="true"
@@ -34,7 +34,6 @@ import { PaginationComponent } from '../../pagination.component';
             [totalItems]="totalItems"
             (pageChange)="onPageChange($event)">
           </app-pagination>
-
           <table *ngIf="addresses.length > 0" class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
               <tr>
@@ -50,7 +49,7 @@ import { PaginationComponent } from '../../pagination.component';
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <a [routerLink]="['/addresses', address.id]" class="text-indigo-600 hover:text-indigo-900 mr-4">View</a>
                   <a [routerLink]="['/addresses', address.id, 'edit']" class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
-                  <button (click)="deleteAddress(address.id)" class="text-red-600 hover:text-red-900">Delete</button>
+                  <button (click)="openDeleteConfirmation(address.id, address.address)" class="text-red-600 hover:text-red-900">Delete</button>
                 </td>
               </tr>
             </tbody>
@@ -68,19 +67,36 @@ import { PaginationComponent } from '../../pagination.component';
             [totalItems]="totalItems"
             (pageChange)="onPageChange($event)">
           </app-pagination>
-
         </div>
       </div>
     </div>
+
+    <!-- Confirmation Dialog -->
+    <app-confirmation-dialog
+      #confirmationDialog
+      [title]="'Delete Address'"
+      [message]="deleteConfirmationMessage"
+      [confirmButtonText]="'Delete'"
+      [cancelButtonText]="'Cancel'"
+      (confirmed)="confirmDelete()"
+      (cancelled)="cancelDelete()">
+    </app-confirmation-dialog>
   `,
 })
 export class AddressListComponent implements OnInit {
+  // Get a reference to the dialog component
+  @ViewChild('confirmationDialog') confirmationDialog!: ConfirmationDialogComponent;
+  
   addresses: Address[] = [];
   loading = false;
   error = '';
   currentPage = 1;
   pageSize = 100;
   totalItems = 0;
+
+  // For delete confirmation dialog
+  addressToDelete: string | null = null;
+  deleteConfirmationMessage = '';
 
   constructor(private addressService: AddressService) {}
 
@@ -115,11 +131,21 @@ export class AddressListComponent implements OnInit {
     });
   }
 
-  deleteAddress(id: string): void {
-    if (confirm('Are you sure you want to delete this address?')) {
-      this.addressService.deleteAddress(id).subscribe({
+  openDeleteConfirmation(id: string, address: string): void {
+    this.addressToDelete = id;
+    this.deleteConfirmationMessage = `Are you sure you want to delete the address "${address}"? This action cannot be undone.`;
+    // Use the dialog's open method
+    this.confirmationDialog.open();
+  }
+
+  confirmDelete(): void {
+    if (this.addressToDelete) {
+      const idToDelete = this.addressToDelete;
+      this.addressToDelete = null;
+      
+      this.addressService.deleteAddress(idToDelete).subscribe({
         next: () => {
-          this.addresses = this.addresses.filter(address => address.id !== id);
+          this.addresses = this.addresses.filter(address => address.id !== idToDelete);
           this.totalItems--;
           // If we deleted the last item on the page, go to previous page
           if (this.addresses.length === 0 && this.currentPage > 1) {
@@ -135,6 +161,10 @@ export class AddressListComponent implements OnInit {
         }
       });
     }
+  }
+
+  cancelDelete(): void {
+    this.addressToDelete = null;
   }
 
   onPageChange(page: number): void {

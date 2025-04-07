@@ -4,11 +4,12 @@ import { RouterLink } from '@angular/router';
 import { StudentService } from '../../../services/student.service';
 import { Student } from '../../../models/student.model';
 import { PaginationComponent } from '../../pagination.component';
+import { ConfirmationDialogComponent } from '../../confirmation-dialog.component';
 
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [CommonModule, RouterLink, PaginationComponent],
+  imports: [CommonModule, RouterLink, PaginationComponent, ConfirmationDialogComponent],
   template: `
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
       <div class="px-4 py-6 sm:px-0">
@@ -27,7 +28,6 @@ import { PaginationComponent } from '../../pagination.component';
           <span class="block sm:inline">{{ error }}</span>
         </div>
         <div class="overflow-x-auto">
-
           <app-pagination
             *ngIf="totalItems > 0"
             [currentPage]="currentPage"
@@ -35,7 +35,6 @@ import { PaginationComponent } from '../../pagination.component';
             [totalItems]="totalItems"
             (pageChange)="onPageChange($event)">
           </app-pagination>
-
           <table *ngIf="students.length > 0" class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
               <tr>
@@ -53,7 +52,7 @@ import { PaginationComponent } from '../../pagination.component';
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <a [routerLink]="['/students', student.id]" class="text-indigo-600 hover:text-indigo-900 mr-4">View</a>
                   <a [routerLink]="['/students', student.id, 'edit']" class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
-                  <button (click)="deleteStudent(student.id)" class="text-red-600 hover:text-red-900">Delete</button>
+                  <button (click)="openDeleteConfirmation(student.id, student.name)" class="text-red-600 hover:text-red-900">Delete</button>
                 </td>
               </tr>
             </tbody>
@@ -73,6 +72,17 @@ import { PaginationComponent } from '../../pagination.component';
         </div>
       </div>
     </div>
+
+    <!-- Confirmation Dialog -->
+    <app-confirmation-dialog
+      [isOpen]="showDeleteConfirmation"
+      [title]="'Delete Student'"
+      [message]="deleteConfirmationMessage"
+      [confirmButtonText]="'Delete'"
+      [cancelButtonText]="'Cancel'"
+      (confirmed)="confirmDelete()"
+      (cancelled)="cancelDelete()">
+    </app-confirmation-dialog>
   `,
 })
 export class StudentListComponent implements OnInit {
@@ -82,6 +92,11 @@ export class StudentListComponent implements OnInit {
   currentPage = 1;
   pageSize = 100;
   totalItems = 0;
+
+  // For delete confirmation dialog
+  showDeleteConfirmation = false;
+  studentToDelete: string | null = null;
+  deleteConfirmationMessage = '';
 
   constructor(private studentService: StudentService) {}
 
@@ -116,11 +131,21 @@ export class StudentListComponent implements OnInit {
     });
   }
 
-  deleteStudent(id: string): void {
-    if (confirm('Are you sure you want to delete this student?')) {
-      this.studentService.deleteStudent(id).subscribe({
+  openDeleteConfirmation(id: string, name: string): void {
+    this.studentToDelete = id;
+    this.deleteConfirmationMessage = `Are you sure you want to delete the student "${name}"? This action cannot be undone.`;
+    this.showDeleteConfirmation = true;
+  }
+
+  confirmDelete(): void {
+    if (this.studentToDelete) {
+      const idToDelete = this.studentToDelete;
+      this.studentToDelete = null;
+      this.showDeleteConfirmation = false; // Make sure to close the dialog
+      
+      this.studentService.deleteStudent(idToDelete).subscribe({
         next: () => {
-          this.students = this.students.filter(student => student.id !== id);
+          this.students = this.students.filter(student => student.id !== idToDelete);
           this.totalItems--;
           // If we deleted the last item on the page, go to previous page
           if (this.students.length === 0 && this.currentPage > 1) {
@@ -136,6 +161,31 @@ export class StudentListComponent implements OnInit {
         }
       });
     }
+  }
+  
+  cancelDelete(): void {
+    this.studentToDelete = null;
+    this.showDeleteConfirmation = false; // Make sure to close the dialog
+  }
+
+  deleteStudent(id: string): void {
+    this.studentService.deleteStudent(id).subscribe({
+      next: () => {
+        this.students = this.students.filter(student => student.id !== id);
+        this.totalItems--;
+        // If we deleted the last item on the page, go to previous page
+        if (this.students.length === 0 && this.currentPage > 1) {
+          this.onPageChange(this.currentPage - 1);
+        } else {
+          // Reload current page to ensure we have the right number of items
+          this.loadStudents();
+        }
+      },
+      error: (err) => {
+        this.error = 'Failed to delete student. Please try again later.';
+        console.error('Error deleting student:', err);
+      }
+    });
   }
 
   onPageChange(page: number): void {
