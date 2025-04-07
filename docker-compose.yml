@@ -20,11 +20,15 @@ services:
     image: liquibase/liquibase
     volumes:
       - ./backend/db:/liquibase/changelog
-    command: --defaultsFile=/liquibase/changelog/liquibase.properties update
+    command: >
+      --defaultsFile=/liquibase/changelog/liquibase.properties
+      --searchPath=/liquibase/changelog,/liquibase/changelog/changelog,/liquibase/changelog/changelog/profile-service
+      update
     depends_on:
       - postgres
     networks:
       - app-network
+
 
   # Profile microservice
   profile-service:

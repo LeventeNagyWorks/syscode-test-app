@@ -3,13 +3,8 @@ databaseChangeLog:
       id: "1"
       author: developer
       changes:
-        # Séma létrehozása az address-service számára
-        - sql:
-            sql: CREATE SCHEMA IF NOT EXISTS address_schema;
-            
-        # Addresses tábla létrehozása
+        # Addresses tábla létrehozása a public schema-ban
         - createTable:
-            schemaName: address_schema
             tableName: addresses
             columns:
               - column:
@@ -58,47 +53,11 @@ databaseChangeLog:
                   name: updated_at
                   type: timestamp
                   defaultValueComputed: CURRENT_TIMESTAMP
-                  
+                   
         # Külső kulcs létrehozása a profile_id-hez
         - addForeignKeyConstraint:
             baseColumnNames: profile_id
             baseTableName: addresses
-            baseTableSchemaName: address_schema
             constraintName: fk_address_profile
             referencedColumnNames: id
             referencedTableName: profiles
-            referencedTableSchemaName: profile_schema
-            
-  # Opcionális: Kezdeti adatok beszúrása
-  - changeSet:
-      id: "2"
-      author: developer
-      changes:
-        - insert:
-            schemaName: address_schema
-            tableName: addresses
-            columns:
-              - column:
-                  name: id
-                  value: "550e8400-e29b-41d4-a716-446655440001"
-              - column:
-                  name: profile_id
-                  value: "550e8400-e29b-41d4-a716-446655440000"
-              - column:
-                  name: street
-                  value: "123 Main St"
-              - column:
-                  name: city
-                  value: "New York"
-              - column:
-                  name: state
-                  value: "NY"
-              - column:
-                  name: postal_code
-                  value: "10001"
-              - column:
-                  name: country
-                  value: "USA"
-              - column:
-                  name: is_primary
-                  valueBoolean: true

@@ -3,13 +3,8 @@ databaseChangeLog:
       id: "1"
       author: developer
       changes:
-        # Séma létrehozása a profile-service számára
-        - sql:
-            sql: CREATE SCHEMA IF NOT EXISTS profile_schema;
-            
-        # Profiles tábla létrehozása
+        # Profiles tábla létrehozása a public schema-ban
         - createTable:
-            schemaName: profile_schema
             tableName: profiles
             columns:
               - column:
@@ -43,13 +38,12 @@ databaseChangeLog:
                   type: timestamp
                   defaultValueComputed: CURRENT_TIMESTAMP
                   
-  # Opcionális: Kezdeti adatok beszúrása
+  # Add this changeset to insert the sample profile
   - changeSet:
       id: "2"
       author: developer
       changes:
         - insert:
-            schemaName: profile_schema
             tableName: profiles
             columns:
               - column:
