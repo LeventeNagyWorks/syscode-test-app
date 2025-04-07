@@ -11,21 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Student = void 0;
 const typeorm_1 = require("typeorm");
-const swagger_1 = require("@nestjs/swagger");
 let Student = class Student {
 };
 __decorate([
-    (0, swagger_1.ApiProperty)({ example: 'uuid', description: 'The unique identifier of the student' }),
     (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
     __metadata("design:type", String)
 ], Student.prototype, "id", void 0);
 __decorate([
-    (0, swagger_1.ApiProperty)({ example: 'John Doe', description: 'The name of the student' }),
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], Student.prototype, "name", void 0);
 __decorate([
-    (0, swagger_1.ApiProperty)({ example: 'john@example.com', description: 'The email of the student' }),
     (0, typeorm_1.Column)({ unique: true }),
     __metadata("design:type", String)
 ], Student.prototype, "email", void 0);

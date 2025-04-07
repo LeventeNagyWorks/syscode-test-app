@@ -375,3 +375,137 @@
 2025-04-07T07:14:07.599Z [INFO]: POST /addresses request received {"context":"AddressController"}
 2025-04-07T07:14:07.599Z [INFO]: Creating new address: {"address":"Nefelejcs utca, 35"} {"context":"AddressService"}
 2025-04-07T07:14:07.609Z [ERROR]: null value in column "id" of relation "addresses" violates not-null constraint {"trace":"QueryFailedError: null value in column \"id\" of relation \"addresses\" violates not-null constraint\n    at PostgresQueryRunner.query (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\driver\\src\\driver\\postgres\\PostgresQueryRunner.ts:328:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async InsertQueryBuilder.execute (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\query-builder\\src\\query-builder\\InsertQueryBuilder.ts:163:33)\n    at async SubjectExecutor.executeInsertOperations (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\persistence\\src\\persistence\\SubjectExecutor.ts:435:42)\n    at async SubjectExecutor.execute (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\persistence\\src\\persistence\\SubjectExecutor.ts:137:9)\n    at async EntityPersistExecutor.execute (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\typeorm\\persistence\\src\\persistence\\EntityPersistExecutor.ts:182:21)\n    at async AddressService.create (C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\src\\address\\address.service.ts:31:26)\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-execution-context.js:46:28\n    at async C:\\Users\\nagyl\\Documents\\GitHub\\syscode-test-app\\backend\\address-service\\node_modules\\@nestjs\\core\\router\\router-proxy.js:9:17","context":"ExceptionsHandler"}
+2025-04-07T07:15:58.712Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T07:15:58.717Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T07:15:58.718Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T07:15:58.719Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T07:15:58.720Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T07:15:58.722Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T07:15:58.723Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T07:15:58.724Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T07:15:58.725Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T07:15:58.729Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T07:15:58.736Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T07:16:00.235Z [INFO]: POST /addresses request received {"context":"AddressController"}
+2025-04-07T07:16:00.235Z [INFO]: Creating new address: {"address":"Nefelejcs utca, 35"} {"context":"AddressService"}
+2025-04-07T07:16:00.275Z [INFO]: Address created with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:16:00.307Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:16:00.307Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:16:09.014Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:16:09.015Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:16:11.027Z [INFO]: GET /addresses/f28f5b40-613c-4719-a4f0-e16998e639e7 request received {"context":"AddressController"}
+2025-04-07T07:16:11.028Z [INFO]: Fetching address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:16:16.127Z [INFO]: PUT /addresses/f28f5b40-613c-4719-a4f0-e16998e639e7 request received {"context":"AddressController"}
+2025-04-07T07:16:16.127Z [INFO]: Updating address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:16:16.127Z [INFO]: Fetching address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:16:16.149Z [INFO]: Address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 updated successfully {"context":"AddressService"}
+2025-04-07T07:16:16.194Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:16:16.194Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:16:20.088Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:16:20.088Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:16:23.216Z [INFO]: GET /addresses/f28f5b40-613c-4719-a4f0-e16998e639e7 request received {"context":"AddressController"}
+2025-04-07T07:16:23.216Z [INFO]: Fetching address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:16:25.586Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:16:25.587Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:16:31.849Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:16:31.850Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:17:22.308Z [INFO]: GET /addresses/f28f5b40-613c-4719-a4f0-e16998e639e7 request received {"context":"AddressController"}
+2025-04-07T07:17:22.308Z [INFO]: Fetching address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:17:26.032Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:17:26.032Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:17:28.897Z [INFO]: GET /addresses/f28f5b40-613c-4719-a4f0-e16998e639e7 request received {"context":"AddressController"}
+2025-04-07T07:17:28.898Z [INFO]: Fetching address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:17:29.999Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:17:29.999Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:17:31.035Z [INFO]: GET /addresses/f28f5b40-613c-4719-a4f0-e16998e639e7 request received {"context":"AddressController"}
+2025-04-07T07:17:31.036Z [INFO]: Fetching address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:17:33.423Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:17:33.425Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:17:35.021Z [INFO]: GET /addresses/f28f5b40-613c-4719-a4f0-e16998e639e7 request received {"context":"AddressController"}
+2025-04-07T07:17:35.022Z [INFO]: Fetching address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:17:42.865Z [INFO]: PUT /addresses/f28f5b40-613c-4719-a4f0-e16998e639e7 request received {"context":"AddressController"}
+2025-04-07T07:17:42.866Z [INFO]: Updating address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:17:42.866Z [INFO]: Fetching address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:17:42.883Z [INFO]: Address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 updated successfully {"context":"AddressService"}
+2025-04-07T07:17:42.924Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:17:42.925Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:17:52.032Z [INFO]: GET /addresses/f28f5b40-613c-4719-a4f0-e16998e639e7 request received {"context":"AddressController"}
+2025-04-07T07:17:52.032Z [INFO]: Fetching address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:17:56.290Z [INFO]: PUT /addresses/f28f5b40-613c-4719-a4f0-e16998e639e7 request received {"context":"AddressController"}
+2025-04-07T07:17:56.290Z [INFO]: Updating address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:17:56.290Z [INFO]: Fetching address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 {"context":"AddressService"}
+2025-04-07T07:17:56.306Z [INFO]: Address with ID: f28f5b40-613c-4719-a4f0-e16998e639e7 updated successfully {"context":"AddressService"}
+2025-04-07T07:17:56.345Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:17:56.346Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:18:05.128Z [INFO]: POST /addresses request received {"context":"AddressController"}
+2025-04-07T07:18:05.128Z [INFO]: Creating new address: {"address":"Harcsa utca, 28."} {"context":"AddressService"}
+2025-04-07T07:18:05.141Z [INFO]: Address created with ID: ecda775c-625b-48bb-80b2-17c4510afe9d {"context":"AddressService"}
+2025-04-07T07:18:05.175Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:18:05.176Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:18:13.952Z [INFO]: GET /addresses/ecda775c-625b-48bb-80b2-17c4510afe9d request received {"context":"AddressController"}
+2025-04-07T07:18:13.953Z [INFO]: Fetching address with ID: ecda775c-625b-48bb-80b2-17c4510afe9d {"context":"AddressService"}
+2025-04-07T07:18:15.747Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:18:15.747Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T07:18:30.567Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T07:18:30.567Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:00:51.403Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:00:51.415Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:00:55.496Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:00:55.496Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:01:41.338Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:01:41.340Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:04:07.340Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:04:07.341Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:05:42.042Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T10:05:42.047Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T10:05:42.047Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T10:05:42.049Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T10:05:42.049Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T10:05:42.050Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T10:05:42.051Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T10:05:42.051Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T10:05:42.052Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T10:05:42.055Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T10:05:42.060Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T10:05:45.359Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T10:05:45.365Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T10:05:45.366Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T10:05:45.367Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T10:05:45.368Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T10:05:45.369Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T10:05:45.369Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T10:05:45.370Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T10:05:45.370Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T10:05:45.373Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T10:05:45.378Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T10:15:29.931Z [INFO]: GET /addresses/550e8400-e29b-41d4-a716-446655440000 request received {"context":"AddressController"}
+2025-04-07T10:15:29.931Z [INFO]: Fetching address with ID: 550e8400-e29b-41d4-a716-446655440000 {"context":"AddressService"}
+2025-04-07T10:15:29.973Z [ERROR]: Address with ID 550e8400-e29b-41d4-a716-446655440000 not found {"trace":"","context":"AddressService"}
+2025-04-07T10:28:58.284Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:28:58.285Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:29:02.811Z [INFO]: POST /addresses request received {"context":"AddressController"}
+2025-04-07T10:29:02.812Z [INFO]: Creating new address: {"address":"Nefelejcs utca, 35"} {"context":"AddressService"}
+2025-04-07T10:29:02.838Z [INFO]: Address created with ID: 1127e419-3291-49bb-91b7-a3a092d715aa {"context":"AddressService"}
+2025-04-07T10:29:02.872Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:29:02.872Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:29:07.073Z [INFO]: POST /addresses request received {"context":"AddressController"}
+2025-04-07T10:29:07.074Z [INFO]: Creating new address: {"address":"Harcsa utca, 28."} {"context":"AddressService"}
+2025-04-07T10:29:07.086Z [INFO]: Address created with ID: 8e5c4a62-883c-4897-9b97-9f73a37b1173 {"context":"AddressService"}
+2025-04-07T10:29:07.116Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:29:07.117Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:29:11.669Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:29:11.669Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:29:14.248Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:29:14.249Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:30:28.216Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:30:28.217Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:30:29.085Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:30:29.085Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:30:30.043Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:30:30.044Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:31:13.665Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:31:13.665Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:31:18.434Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:31:18.434Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:31:25.958Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:31:25.958Z [INFO]: Fetching all addresses {"context":"AddressService"}

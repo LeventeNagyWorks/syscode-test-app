@@ -4,6 +4,7 @@ import { CreateStudentDto } from './dto/create-student.dto';
 import { UpdateStudentDto } from './dto/update-student.dto';
 export declare class StudentService {
     private studentRepository;
+    private readonly logger;
     constructor(studentRepository: Repository<Student>);
     create(createStudentDto: CreateStudentDto): Promise<Student>;
     findAll(): Promise<Student[]>;
