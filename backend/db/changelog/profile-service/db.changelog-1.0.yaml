@@ -3,9 +3,9 @@ databaseChangeLog:
       id: "1"
       author: developer
       changes:
-        # Profiles tábla létrehozása a public schema-ban
+        # Students tábla létrehozása a public schema-ban
         - createTable:
-            tableName: profiles
+            tableName: students
             columns:
               - column:
                   name: id
@@ -14,12 +14,7 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: first_name
-                  type: varchar(100)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: last_name
+                  name: name
                   type: varchar(100)
                   constraints:
                     nullable: false
@@ -29,32 +24,21 @@ databaseChangeLog:
                   constraints:
                     nullable: false
                     unique: true
-              - column:
-                  name: created_at
-                  type: timestamp
-                  defaultValueComputed: CURRENT_TIMESTAMP
-              - column:
-                  name: updated_at
-                  type: timestamp
-                  defaultValueComputed: CURRENT_TIMESTAMP
-                  
-  # Add this changeset to insert the sample profile
+                   
+  # Add sample student data
   - changeSet:
       id: "2"
       author: developer
       changes:
         - insert:
-            tableName: profiles
+            tableName: students
             columns:
               - column:
                   name: id
                   value: "550e8400-e29b-41d4-a716-446655440000"
               - column:
-                  name: first_name
-                  value: "John"
-              - column:
-                  name: last_name
-                  value: "Doe"
+                  name: name
+                  value: "John Doe"
               - column:
                   name: email
                   value: "john.doe@example.com"

@@ -14,50 +14,7 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: profile_id
-                  type: uuid
-                  constraints:
-                    nullable: false
-              - column:
-                  name: street
+                  name: address
                   type: varchar(255)
                   constraints:
                     nullable: false
-              - column:
-                  name: city
-                  type: varchar(100)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: state
-                  type: varchar(100)
-              - column:
-                  name: postal_code
-                  type: varchar(20)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: country
-                  type: varchar(100)
-                  constraints:
-                    nullable: false
-              - column:
-                  name: is_primary
-                  type: boolean
-                  defaultValueBoolean: false
-              - column:
-                  name: created_at
-                  type: timestamp
-                  defaultValueComputed: CURRENT_TIMESTAMP
-              - column:
-                  name: updated_at
-                  type: timestamp
-                  defaultValueComputed: CURRENT_TIMESTAMP
-                   
-        # Külső kulcs létrehozása a profile_id-hez
-        - addForeignKeyConstraint:
-            baseColumnNames: profile_id
-            baseTableName: addresses
-            constraintName: fk_address_profile
-            referencedColumnNames: id
-            referencedTableName: profiles
