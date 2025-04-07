@@ -705,3 +705,359 @@
 2025-04-07T14:04:09.232Z [INFO]: Fetching addresses with pagination: page=3, limit=100 {"context":"AddressService"}
 2025-04-07T14:04:13.118Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
 2025-04-07T14:04:13.118Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:06.842Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:06.843Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:06.846Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:06.846Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:05:08.779Z [INFO]: GET /addresses/00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd request received {"context":"AddressController"}
+2025-04-07T14:05:08.780Z [INFO]: Fetching address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:05:10.674Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:10.675Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:10.682Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:10.682Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:05:11.935Z [INFO]: GET /addresses/00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd request received {"context":"AddressController"}
+2025-04-07T14:05:11.935Z [INFO]: Fetching address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:05:19.638Z [INFO]: PUT /addresses/00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd request received {"context":"AddressController"}
+2025-04-07T14:05:19.639Z [INFO]: Updating address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:05:19.639Z [INFO]: Fetching address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:05:19.665Z [INFO]: Address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd updated successfully {"context":"AddressService"}
+2025-04-07T14:05:19.703Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:19.704Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:19.707Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:19.708Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:05:25.805Z [INFO]: POST /addresses request received {"context":"AddressController"}
+2025-04-07T14:05:25.805Z [INFO]: Creating new address: {"address":"Nefelejcs utca, 35"} {"context":"AddressService"}
+2025-04-07T14:05:25.825Z [INFO]: Address created with ID: a1ca12d6-cf06-48b3-bd26-16da10c5c115 {"context":"AddressService"}
+2025-04-07T14:05:25.879Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:25.882Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:25.885Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:25.886Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:05:33.029Z [INFO]: GET /addresses request received with page=101, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:33.029Z [INFO]: Fetching addresses with pagination: page=101, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:35.445Z [INFO]: GET /addresses request received with page=100, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:35.446Z [INFO]: Fetching addresses with pagination: page=100, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:44.358Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:44.358Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:49.826Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:49.828Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:49.831Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:49.832Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:05:51.608Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:51.609Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:51.612Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:51.612Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:05:53.294Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:53.295Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:53.299Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:53.300Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:05:54.024Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:54.024Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:54.026Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:54.029Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:05:54.739Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:54.740Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:54.742Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:54.743Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:05:55.856Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:55.856Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:55.859Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:55.861Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:05:56.658Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:56.658Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:56.663Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:56.664Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:05:57.348Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:05:57.349Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:05:57.350Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:05:57.351Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:06:31.810Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:06:31.811Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:06:31.814Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:06:31.814Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:06:33.678Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:06:33.679Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:06:33.684Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:06:33.684Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:07:14.137Z [INFO]: GET /addresses/00097826-e17c-4b3e-a650-7c6494c3d30a request received {"context":"AddressController"}
+2025-04-07T14:07:14.137Z [INFO]: Fetching address with ID: 00097826-e17c-4b3e-a650-7c6494c3d30a {"context":"AddressService"}
+2025-04-07T14:07:14.161Z [ERROR]: Address with ID 00097826-e17c-4b3e-a650-7c6494c3d30a not found {"trace":"","context":"AddressService"}
+2025-04-07T14:07:29.495Z [INFO]: GET /addresses/00097826-e17c-4b3e-a650-7c6494c3d30a request received {"context":"AddressController"}
+2025-04-07T14:07:29.496Z [INFO]: Fetching address with ID: 00097826-e17c-4b3e-a650-7c6494c3d30a {"context":"AddressService"}
+2025-04-07T14:07:29.520Z [ERROR]: Address with ID 00097826-e17c-4b3e-a650-7c6494c3d30a not found {"trace":"","context":"AddressService"}
+2025-04-07T14:07:40.495Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:07:40.496Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:07:40.498Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:07:40.498Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:07:44.367Z [INFO]: GET /addresses/00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd request received {"context":"AddressController"}
+2025-04-07T14:07:44.367Z [INFO]: Fetching address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:10:04.470Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:10:04.471Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:10:04.472Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:10:04.473Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:10:05.322Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:10:05.323Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:10:05.325Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:10:05.325Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:10:07.705Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:10:07.705Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:10:07.710Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:10:07.711Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:10:11.850Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:10:11.851Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:10:11.853Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:10:11.853Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:10:31.992Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:10:31.992Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:10:31.996Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:10:31.997Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:10:36.323Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:10:36.324Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:10:36.326Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:10:36.326Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:10:37.536Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:10:37.536Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:10:37.538Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:10:37.538Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:10:38.965Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:10:38.965Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:10:38.968Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:10:38.969Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:11:45.523Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:11:45.524Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:11:45.525Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:11:45.526Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:12:42.159Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:12:42.160Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:12:42.162Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:12:42.162Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:12:46.846Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:12:46.847Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:12:46.851Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:12:46.851Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:13:11.781Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:13:11.782Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:13:11.784Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:13:11.786Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:13:59.918Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:13:59.918Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:13:59.920Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:13:59.920Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:14:52.196Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:14:52.198Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:14:52.202Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:14:52.202Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:17:39.727Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:17:39.728Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:17:39.729Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:17:39.729Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:17:40.465Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:17:40.467Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:17:40.471Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:17:40.472Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:17:40.779Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:17:40.780Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:17:40.782Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:17:40.782Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:17:47.501Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:17:47.501Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:17:47.504Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:17:47.505Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:17:49.533Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:17:49.534Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:17:49.535Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:17:49.536Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:17:59.571Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:17:59.572Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:17:59.575Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:17:59.575Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:00.715Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:00.716Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:00.719Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:00.720Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:01.183Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:01.183Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:01.185Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:01.185Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:12.691Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:12.691Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:12.692Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:12.692Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:17.190Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:17.191Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:17.194Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:17.195Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:20.653Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:20.658Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:20.660Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:20.661Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:27.388Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:27.389Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:27.391Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:27.391Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:27.879Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:27.894Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:27.896Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:27.896Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:28.444Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:28.444Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:28.446Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:28.448Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:28.853Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:28.853Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:28.857Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:28.857Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:31.080Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:31.081Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:31.084Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:31.085Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:32.110Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:32.111Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:32.118Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:32.231Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:32.988Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:32.991Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:32.993Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:32.995Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:33.808Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:33.808Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:33.810Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:33.810Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:38.560Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:38.561Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:38.563Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:38.564Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:18:41.032Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:18:41.033Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:18:41.036Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:18:41.037Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:19:24.244Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T14:19:24.255Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T14:19:24.256Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T14:19:24.261Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T14:19:24.263Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T14:19:24.265Z [INFO]: Mapped {/addresses/count, GET} route {"context":"RouterExplorer"}
+2025-04-07T14:19:24.268Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T14:19:24.281Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T14:19:24.283Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T14:19:24.290Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T14:19:24.297Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T14:19:24.305Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T14:19:35.965Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T14:19:35.972Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T14:19:35.972Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T14:19:35.974Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T14:19:35.975Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T14:19:35.977Z [INFO]: Mapped {/addresses/count, GET} route {"context":"RouterExplorer"}
+2025-04-07T14:19:35.978Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T14:19:35.979Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T14:19:35.980Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T14:19:35.981Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T14:19:35.984Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T14:19:35.991Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T14:25:25.902Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:25:25.903Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:25:25.915Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:25:25.916Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:25:30.970Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:25:30.971Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:25:30.973Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:25:30.974Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:25:35.630Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:25:35.631Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:25:35.634Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:25:35.634Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:25:37.156Z [INFO]: GET /addresses/00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd request received {"context":"AddressController"}
+2025-04-07T14:25:37.157Z [INFO]: Fetching address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:25:40.302Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:25:40.303Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:25:40.307Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:25:40.308Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:25:42.910Z [INFO]: GET /addresses/00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd request received {"context":"AddressController"}
+2025-04-07T14:25:42.911Z [INFO]: Fetching address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:25:46.782Z [INFO]: PUT /addresses/00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd request received {"context":"AddressController"}
+2025-04-07T14:25:46.783Z [INFO]: Updating address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:25:46.783Z [INFO]: Fetching address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:25:46.820Z [INFO]: Address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd updated successfully {"context":"AddressService"}
+2025-04-07T14:25:46.878Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:25:46.880Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:25:46.885Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:25:46.891Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:25:52.068Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:25:52.069Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:25:52.072Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:25:52.073Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:25:55.456Z [INFO]: GET /addresses/00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd request received {"context":"AddressController"}
+2025-04-07T14:25:55.457Z [INFO]: Fetching address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:25:58.495Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:25:58.495Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:25:58.498Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:25:58.499Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:26:03.302Z [INFO]: DELETE /addresses/00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd request received {"context":"AddressController"}
+2025-04-07T14:26:03.302Z [INFO]: Removing address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:26:03.303Z [INFO]: Fetching address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd {"context":"AddressService"}
+2025-04-07T14:26:03.319Z [INFO]: Address with ID: 00013eeb-3afa-4c6b-bb60-b8c3aa3ce6fd removed successfully {"context":"AddressService"}
+2025-04-07T14:26:03.327Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:26:03.328Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:29:42.922Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:29:42.922Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:29:42.925Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:29:42.925Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:29:51.366Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:29:51.366Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:29:51.368Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:29:51.369Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:29:55.279Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:29:55.280Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:29:55.283Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:29:55.284Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:30:00.077Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:30:00.077Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:30:00.080Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:30:00.081Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:30:21.432Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:30:21.433Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:30:21.435Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:30:21.436Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:30:31.803Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:30:31.804Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:30:31.806Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:30:31.807Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:31:13.736Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:31:13.736Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:31:13.738Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:31:13.739Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:31:17.981Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:31:17.982Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:31:17.983Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:31:17.984Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:31:20.341Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:31:20.341Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:31:20.343Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:31:20.343Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:31:36.670Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:31:36.674Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:31:36.676Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:31:36.677Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:31:44.532Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:31:44.533Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:31:44.537Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:31:44.538Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:38:17.968Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:38:17.969Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:38:17.976Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:38:17.977Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:38:42.798Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:38:42.798Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:38:42.802Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:38:42.803Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:38:47.934Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:38:47.935Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:38:47.939Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:38:47.940Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:38:50.533Z [INFO]: GET /addresses request received with page=1, limit=100 {"context":"AddressController"}
+2025-04-07T14:38:50.534Z [INFO]: Fetching addresses with pagination: page=1, limit=100 {"context":"AddressService"}
+2025-04-07T14:38:50.536Z [INFO]: GET /addresses/count request received {"context":"AddressController"}
+2025-04-07T14:38:50.536Z [INFO]: Counting all addresses {"context":"AddressService"}
+2025-04-07T14:39:14.042Z [INFO]: GET /addresses/00097826-e17c-4b3e-a650-7c6494c3d30a request received {"context":"AddressController"}
+2025-04-07T14:39:14.042Z [INFO]: Fetching address with ID: 00097826-e17c-4b3e-a650-7c6494c3d30a {"context":"AddressService"}
+2025-04-07T14:39:14.068Z [ERROR]: Address with ID 00097826-e17c-4b3e-a650-7c6494c3d30a not found {"trace":"","context":"AddressService"}

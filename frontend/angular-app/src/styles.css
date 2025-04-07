@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-button {
+button, a {
     cursor: pointer;
+    user-select: none;
     transition-duration: 500ms;
 }

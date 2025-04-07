@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { NavbarBtnComponent } from './navbar-btn.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, CommonModule, NavbarBtnComponent],
   template: `
     <nav class="bg-gray-800 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,27 +17,19 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <a 
-                  routerLink="/" 
-                  routerLinkActive="bg-gray-900" [routerLinkActiveOptions]="{exact: true}" 
-                  class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
-                >
-                  Home
-                </a>
-                <a 
-                  routerLink="/students" 
-                  routerLinkActive="bg-gray-900" 
-                  class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
-                >
-                  Students
-                </a>
-                <a 
-                  routerLink="/addresses" 
-                  routerLinkActive="bg-gray-900" 
-                  class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
-                >
-                  Addresses
-                </a>
+                <app-navbar-btn 
+                  route="/" 
+                  text="Home" 
+                  [exact]="true"
+                />
+                <app-navbar-btn 
+                  route="/students" 
+                  text="Students"
+                />
+                <app-navbar-btn 
+                  route="/addresses" 
+                  text="Addresses"
+                />
               </div>
             </div>
           </div>
@@ -52,6 +46,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       <!-- Mobile menu -->
       <div class="md:hidden" [class.hidden]="!isMobileMenuOpen">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <!-- For mobile, we need a slightly different style, so we'll keep the original links -->
           <a routerLink="/" routerLinkActive="bg-gray-900" [routerLinkActiveOptions]="{exact: true}" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Home</a>
           <a routerLink="/students" routerLinkActive="bg-gray-900" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Students</a>
           <a routerLink="/addresses" routerLinkActive="bg-gray-900" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Addresses</a>
@@ -62,7 +57,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class NavbarComponent {
   isMobileMenuOpen = false;
-
+  
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
