@@ -5,3 +5,7 @@ button, a {
     user-select: none;
     transition-duration: 500ms;
 }
+
+@theme {
+    --color-accent: #4f39f6;
+}

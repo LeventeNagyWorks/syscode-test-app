@@ -18,7 +18,7 @@ import { ToastService } from '../../../services/toast.service';
           <h1 class="text-2xl font-semibold text-gray-900">Students</h1>
           <a
             routerLink="/students/new"
-            class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-accent hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             Add Student
           </a>
         </div>
@@ -51,8 +51,8 @@ import { ToastService } from '../../../services/toast.service';
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ student.name }}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ student.email }}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                  <a [routerLink]="['/students', student.id]" class="text-indigo-600 hover:text-indigo-900 mr-4">View</a>
-                  <a [routerLink]="['/students', student.id, 'edit']" class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
+                  <a [routerLink]="['/students', student.id]" class="text-accent hover:text-indigo-900 mr-4">View</a>
+                  <a [routerLink]="['/students', student.id, 'edit']" class="text-accent hover:text-indigo-900 mr-4">Edit</a>
                   <button (click)="openDeleteConfirmation(student.id, student.name)" class="text-red-600 hover:text-red-900">Delete</button>
                 </td>
               </tr>

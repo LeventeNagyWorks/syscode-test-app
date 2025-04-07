@@ -32,7 +32,7 @@ import { ToastService } from '../../../services/toast.service';
               type="text" 
               id="name" 
               formControlName="name" 
-              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              class="mt-1 block w-full rounded-md border-gray-300 outline-none shadow-sm focus:border-indigo-500 focus:ring-indigo-500 md:text-md sm:text-sm px-2 py-2"
               [ngClass]="{'border-red-500': submitted && f['name'].errors}"
             >
             <div *ngIf="submitted && f['name'].errors" class="mt-1 text-sm text-red-600">
@@ -46,7 +46,7 @@ import { ToastService } from '../../../services/toast.service';
               type="email" 
               id="email" 
               formControlName="email" 
-              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+              class="mt-1 block w-full rounded-md border-gray-300 outline-none shadow-sm focus:border-indigo-500 focus:ring-indigo-500 md:text-md sm:text-sm px-2 py-2"
               [ngClass]="{'border-red-500': submitted && f['email'].errors}"
             >
             <div *ngIf="submitted && f['email'].errors" class="mt-1 text-sm text-red-600">
@@ -65,7 +65,7 @@ import { ToastService } from '../../../services/toast.service';
             </button>
             <button 
               type="submit" 
-              class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-accent hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               [disabled]="loading"
             >
               {{ isEditMode ? 'Update' : 'Create' }}
