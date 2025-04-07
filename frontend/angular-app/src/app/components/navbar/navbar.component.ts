@@ -15,9 +15,27 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <a routerLink="/" routerLinkActive="bg-gray-900" [routerLinkActiveOptions]="{exact: true}" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Home</a>
-                <a routerLink="/students" routerLinkActive="bg-gray-900" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Students</a>
-                <a routerLink="/addresses" routerLinkActive="bg-gray-900" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">Addresses</a>
+                <a 
+                  routerLink="/" 
+                  routerLinkActive="bg-gray-900" [routerLinkActiveOptions]="{exact: true}" 
+                  class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
+                >
+                  Home
+                </a>
+                <a 
+                  routerLink="/students" 
+                  routerLinkActive="bg-gray-900" 
+                  class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
+                >
+                  Students
+                </a>
+                <a 
+                  routerLink="/addresses" 
+                  routerLinkActive="bg-gray-900" 
+                  class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
+                >
+                  Addresses
+                </a>
               </div>
             </div>
           </div>

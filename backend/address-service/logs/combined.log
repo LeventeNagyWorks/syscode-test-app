@@ -509,3 +509,88 @@
 2025-04-07T10:31:18.434Z [INFO]: Fetching all addresses {"context":"AddressService"}
 2025-04-07T10:31:25.958Z [INFO]: GET /addresses request received {"context":"AddressController"}
 2025-04-07T10:31:25.958Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:33:28.515Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:33:28.516Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:33:29.510Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:33:29.510Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:33:30.381Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:33:30.382Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:33:31.589Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:33:31.589Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:33:34.907Z [INFO]: GET /addresses/1127e419-3291-49bb-91b7-a3a092d715aa request received {"context":"AddressController"}
+2025-04-07T10:33:34.908Z [INFO]: Fetching address with ID: 1127e419-3291-49bb-91b7-a3a092d715aa {"context":"AddressService"}
+2025-04-07T10:33:40.543Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:33:40.544Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:33:43.110Z [INFO]: GET /addresses/8e5c4a62-883c-4897-9b97-9f73a37b1173 request received {"context":"AddressController"}
+2025-04-07T10:33:43.111Z [INFO]: Fetching address with ID: 8e5c4a62-883c-4897-9b97-9f73a37b1173 {"context":"AddressService"}
+2025-04-07T10:33:46.128Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:33:46.129Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:34:50.871Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:34:50.872Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:34:54.108Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:34:54.109Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T10:35:03.293Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T10:35:03.293Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:15:33.385Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:15:33.386Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:15:36.601Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:15:36.601Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:15:38.439Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:15:38.440Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:15:40.329Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:15:40.330Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:15:41.103Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:15:41.103Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:15:41.832Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:15:41.833Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:15:43.527Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:15:43.528Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:17:05.156Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:17:05.157Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:17:08.868Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:17:08.879Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:17:10.837Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:17:10.838Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:17:12.434Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:17:12.434Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:17:13.909Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:17:13.910Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:18:41.499Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:18:41.500Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:18:42.918Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:18:42.920Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:21:50.883Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T11:21:50.884Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T11:22:16.831Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T11:22:16.837Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:22:16.837Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T11:22:16.838Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T11:22:16.839Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:22:16.840Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:22:16.840Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T11:22:16.841Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T11:22:16.841Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:22:16.844Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T11:22:16.848Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T11:22:20.870Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T11:22:20.876Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:22:20.876Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T11:22:20.878Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T11:22:20.878Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:22:20.880Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:22:20.880Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T11:22:20.881Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T11:22:20.882Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:22:20.885Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T11:22:20.890Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T11:32:07.649Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T11:32:07.654Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:32:07.655Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T11:32:07.656Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T11:32:07.656Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:32:07.657Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:32:07.658Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T11:32:07.658Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T11:32:07.659Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T11:32:07.662Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T11:32:07.666Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}

@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "axios": "^1.8.4",
+    "fs": "^0.0.1-security",
+    "uuid": "^11.1.0"
+  }
+}
