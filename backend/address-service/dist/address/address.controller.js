@@ -29,9 +29,17 @@ let AddressController = class AddressController {
         this.logger.log('POST /addresses request received', 'AddressController');
         return this.addressService.create(createAddressDto);
     }
-    findAll() {
-        this.logger.log('GET /addresses request received', 'AddressController');
-        return this.addressService.findAll();
+    findAll(page = 1, limit = 100) {
+        this.logger.log(`GET /addresses request received with page=${page}, limit=${limit}`, 'AddressController');
+        return this.addressService.findAll(page, limit);
+    }
+    count() {
+        this.logger.log('GET /addresses/count request received', 'AddressController');
+        return this.addressService.count();
+    }
+    getRandomAddress() {
+        this.logger.log('GET /addresses/random request received', 'AddressController');
+        return this.addressService.generateRandomAddress();
     }
     findOne(id) {
         this.logger.log(`GET /addresses/${id} request received`, 'AddressController');
@@ -44,10 +52,6 @@ let AddressController = class AddressController {
     remove(id) {
         this.logger.log(`DELETE /addresses/${id} request received`, 'AddressController');
         return this.addressService.remove(id);
-    }
-    getRandomAddress() {
-        this.logger.log('GET /addresses/random request received', 'AddressController');
-        return this.addressService.generateRandomAddress();
     }
 };
 exports.AddressController = AddressController;
@@ -62,10 +66,26 @@ __decorate([
 __decorate([
     (0, common_1.Get)(),
     (0, common_1.UseGuards)(basic_auth_guard_1.BasicAuthGuard),
+    __param(0, (0, common_1.Query)('page')),
+    __param(1, (0, common_1.Query)('limit')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number, Number]),
+    __metadata("design:returntype", Promise)
+], AddressController.prototype, "findAll", null);
+__decorate([
+    (0, common_1.Get)('count'),
+    (0, common_1.UseGuards)(basic_auth_guard_1.BasicAuthGuard),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
-], AddressController.prototype, "findAll", null);
+], AddressController.prototype, "count", null);
+__decorate([
+    (0, common_1.Get)('random'),
+    (0, common_1.UseGuards)(basic_auth_guard_1.BasicAuthGuard),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", address_entity_1.Address)
+], AddressController.prototype, "getRandomAddress", null);
 __decorate([
     (0, common_1.Get)(':id'),
     (0, common_1.UseGuards)(basic_auth_guard_1.BasicAuthGuard),
@@ -91,13 +111,6 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], AddressController.prototype, "remove", null);
-__decorate([
-    (0, common_1.Get)('random'),
-    (0, common_1.UseGuards)(basic_auth_guard_1.BasicAuthGuard),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", address_entity_1.Address)
-], AddressController.prototype, "getRandomAddress", null);
 exports.AddressController = AddressController = __decorate([
     (0, common_1.Controller)('addresses'),
     __metadata("design:paramtypes", [address_service_1.AddressService,

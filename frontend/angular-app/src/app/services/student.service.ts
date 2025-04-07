@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Student } from '../models/student.model';
 
@@ -7,12 +7,20 @@ import { Student } from '../models/student.model';
   providedIn: 'root'
 })
 export class StudentService {
-  private apiUrl = 'http://localhost:3000/students'; // Profile service URL
+  private apiUrl = 'http://localhost:3000/students';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getStudents(): Observable<Student[]> {
-    return this.http.get<Student[]>(this.apiUrl);
+  getStudents(page: number = 1, limit: number = 100): Observable<Student[]> {
+    const params = new HttpParams()
+      .set('page', page.toString())
+      .set('limit', limit.toString());
+    
+    return this.http.get<Student[]>(this.apiUrl, { params });
+  }
+
+  getStudentCount(): Observable<number> {
+    return this.http.get<number>(`${this.apiUrl}/count`);
   }
 
   getStudent(id: string): Observable<Student> {

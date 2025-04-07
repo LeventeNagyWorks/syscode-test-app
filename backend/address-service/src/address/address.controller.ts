@@ -8,6 +8,7 @@ import {
   Put,
   Delete,
   UseGuards,
+  Query,
 } from '@nestjs/common';
 import { AddressService } from './address.service';
 import { Address } from './entities/address.entity';
@@ -32,11 +33,39 @@ export class AddressController {
 
   @Get()
   @UseGuards(BasicAuthGuard)
-  findAll(): Promise<Address[]> {
-    this.logger.log('GET /addresses request received', 'AddressController');
-    return this.addressService.findAll();
+  findAll(
+    @Query('page') page: number = 1,
+    @Query('limit') limit: number = 100,
+  ): Promise<Address[]> {
+    this.logger.log(
+      `GET /addresses request received with page=${page}, limit=${limit}`,
+      'AddressController',
+    );
+    return this.addressService.findAll(page, limit);
   }
 
+  // Move these endpoints BEFORE the :id endpoint
+  @Get('count')
+  @UseGuards(BasicAuthGuard)
+  count(): Promise<number> {
+    this.logger.log(
+      'GET /addresses/count request received',
+      'AddressController',
+    );
+    return this.addressService.count();
+  }
+
+  @Get('random')
+  @UseGuards(BasicAuthGuard)
+  getRandomAddress(): Address {
+    this.logger.log(
+      'GET /addresses/random request received',
+      'AddressController',
+    );
+    return this.addressService.generateRandomAddress();
+  }
+
+  // This should come AFTER the specific routes
   @Get(':id')
   @UseGuards(BasicAuthGuard)
   findOne(@Param('id') id: string): Promise<Address> {
@@ -68,15 +97,5 @@ export class AddressController {
       'AddressController',
     );
     return this.addressService.remove(id);
-  }
-
-  @Get('random')
-  @UseGuards(BasicAuthGuard)
-  getRandomAddress(): Address {
-    this.logger.log(
-      'GET /addresses/random request received',
-      'AddressController',
-    );
-    return this.addressService.generateRandomAddress();
   }
 }

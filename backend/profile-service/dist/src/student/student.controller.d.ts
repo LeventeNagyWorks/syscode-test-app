@@ -6,7 +6,8 @@ export declare class StudentController {
     private readonly studentService;
     constructor(studentService: StudentService);
     create(createStudentDto: CreateStudentDto): Promise<Student>;
-    findAll(): Promise<Student[]>;
+    findAll(page?: number, limit?: number): Promise<Student[]>;
+    count(): Promise<number>;
     findOne(id: string): Promise<Student>;
     update(id: string, updateStudentDto: UpdateStudentDto): Promise<Student>;
     remove(id: string): Promise<void>;

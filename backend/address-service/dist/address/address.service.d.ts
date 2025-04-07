@@ -8,7 +8,8 @@ export declare class AddressService {
     private logger;
     constructor(addressRepository: Repository<Address>, logger: LoggerService);
     create(createAddressDto: CreateAddressDto): Promise<Address>;
-    findAll(): Promise<Address[]>;
+    findAll(page?: number, limit?: number): Promise<Address[]>;
+    count(): Promise<number>;
     findOne(id: string): Promise<Address>;
     update(id: string, updateAddressDto: UpdateAddressDto): Promise<Address>;
     remove(id: string): Promise<void>;

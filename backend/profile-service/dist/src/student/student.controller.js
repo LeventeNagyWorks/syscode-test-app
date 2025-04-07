@@ -26,8 +26,11 @@ let StudentController = class StudentController {
     create(createStudentDto) {
         return this.studentService.create(createStudentDto);
     }
-    findAll() {
-        return this.studentService.findAll();
+    findAll(page = 1, limit = 100) {
+        return this.studentService.findAll(page, limit);
+    }
+    count() {
+        return this.studentService.count();
     }
     findOne(id) {
         return this.studentService.findOne(id);
@@ -52,10 +55,22 @@ __decorate([
     (0, common_1.Get)(),
     (0, swagger_1.ApiOperation)({ summary: 'Get all students' }),
     (0, swagger_1.ApiResponse)({ status: 200, description: 'Return all students', type: [student_entity_1.Student] }),
+    (0, swagger_1.ApiQuery)({ name: 'page', required: false, type: Number }),
+    (0, swagger_1.ApiQuery)({ name: 'limit', required: false, type: Number }),
+    __param(0, (0, common_1.Query)('page')),
+    __param(1, (0, common_1.Query)('limit')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number, Number]),
+    __metadata("design:returntype", Promise)
+], StudentController.prototype, "findAll", null);
+__decorate([
+    (0, common_1.Get)('count'),
+    (0, swagger_1.ApiOperation)({ summary: 'Get total count of students' }),
+    (0, swagger_1.ApiResponse)({ status: 200, description: 'Return the total count of students', type: Number }),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
-], StudentController.prototype, "findAll", null);
+], StudentController.prototype, "count", null);
 __decorate([
     (0, common_1.Get)(':id'),
     (0, swagger_1.ApiOperation)({ summary: 'Get a student by id' }),

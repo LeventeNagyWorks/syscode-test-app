@@ -3,32 +3,39 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { StudentService } from '../../../services/student.service';
 import { Student } from '../../../models/student.model';
+import { PaginationComponent } from '../../pagination.component';
 
 @Component({
   selector: 'app-student-list',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, PaginationComponent],
   template: `
     <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
       <div class="px-4 py-6 sm:px-0">
         <div class="flex justify-between items-center mb-6">
           <h1 class="text-2xl font-semibold text-gray-900">Students</h1>
-          <a 
-            routerLink="/students/new" 
+          <a
+            routerLink="/students/new"
             class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             Add Student
           </a>
         </div>
-
         <div *ngIf="loading" class="flex justify-center">
           <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-indigo-500"></div>
         </div>
-
         <div *ngIf="error" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
           <span class="block sm:inline">{{ error }}</span>
         </div>
-
         <div class="overflow-x-auto">
+
+          <app-pagination
+            *ngIf="totalItems > 0"
+            [currentPage]="currentPage"
+            [pageSize]="pageSize"
+            [totalItems]="totalItems"
+            (pageChange)="onPageChange($event)">
+          </app-pagination>
+
           <table *ngIf="students.length > 0" class="min-w-full divide-y divide-gray-200">
             <thead class="bg-gray-50">
               <tr>
@@ -55,6 +62,14 @@ import { Student } from '../../../models/student.model';
           <div *ngIf="!loading && students.length === 0" class="text-center py-10">
             <p class="text-gray-500">No students found. Add a new student to get started.</p>
           </div>
+          
+          <app-pagination
+            *ngIf="totalItems > 0"
+            [currentPage]="currentPage"
+            [pageSize]="pageSize"
+            [totalItems]="totalItems"
+            (pageChange)="onPageChange($event)">
+          </app-pagination>
         </div>
       </div>
     </div>
@@ -64,16 +79,20 @@ export class StudentListComponent implements OnInit {
   students: Student[] = [];
   loading = false;
   error = '';
+  currentPage = 1;
+  pageSize = 100;
+  totalItems = 0;
 
   constructor(private studentService: StudentService) {}
 
   ngOnInit(): void {
     this.loadStudents();
+    this.loadTotalCount();
   }
 
   loadStudents(): void {
     this.loading = true;
-    this.studentService.getStudents().subscribe({
+    this.studentService.getStudents(this.currentPage, this.pageSize).subscribe({
       next: (data) => {
         this.students = data;
         this.loading = false;
@@ -86,11 +105,30 @@ export class StudentListComponent implements OnInit {
     });
   }
 
+  loadTotalCount(): void {
+    this.studentService.getStudentCount().subscribe({
+      next: (count) => {
+        this.totalItems = count;
+      },
+      error: (err) => {
+        console.error('Error loading student count:', err);
+      }
+    });
+  }
+
   deleteStudent(id: string): void {
     if (confirm('Are you sure you want to delete this student?')) {
       this.studentService.deleteStudent(id).subscribe({
         next: () => {
           this.students = this.students.filter(student => student.id !== id);
+          this.totalItems--;
+          // If we deleted the last item on the page, go to previous page
+          if (this.students.length === 0 && this.currentPage > 1) {
+            this.onPageChange(this.currentPage - 1);
+          } else {
+            // Reload current page to ensure we have the right number of items
+            this.loadStudents();
+          }
         },
         error: (err) => {
           this.error = 'Failed to delete student. Please try again later.';
@@ -98,5 +136,12 @@ export class StudentListComponent implements OnInit {
         }
       });
     }
+  }
+
+  onPageChange(page: number): void {
+    this.currentPage = page;
+    this.loadStudents();
+    // Scroll to top of the page for better UX
+    window.scrollTo(0, 0);
   }
 }

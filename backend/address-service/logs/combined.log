@@ -594,3 +594,66 @@
 2025-04-07T11:32:07.659Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
 2025-04-07T11:32:07.662Z [INFO]: Nest application successfully started {"context":"NestApplication"}
 2025-04-07T11:32:07.666Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T12:36:09.530Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T12:36:09.535Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T12:36:09.535Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T12:36:09.536Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T12:36:09.537Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T12:36:09.538Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T12:36:09.539Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T12:36:09.539Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T12:36:09.539Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T12:36:09.543Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T12:36:09.548Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T12:36:15.701Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T12:36:15.702Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T13:19:27.098Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T13:19:27.101Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T13:20:00.755Z [INFO]: GET /addresses request received {"context":"AddressController"}
+2025-04-07T13:20:00.756Z [INFO]: Fetching all addresses {"context":"AddressService"}
+2025-04-07T13:40:17.428Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T13:40:17.436Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:40:17.437Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T13:40:17.440Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T13:40:17.442Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:40:17.444Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:40:17.445Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T13:40:17.446Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T13:40:17.447Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:40:17.453Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T13:40:17.461Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T13:40:21.462Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T13:40:21.468Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:40:21.468Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T13:40:21.470Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T13:40:21.471Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:40:21.472Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:40:21.472Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T13:40:21.473Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T13:40:21.473Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:40:21.478Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T13:40:21.482Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T13:47:58.949Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T13:47:58.954Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:47:58.954Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T13:47:58.956Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T13:47:58.956Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:47:58.957Z [INFO]: Mapped {/addresses/count, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:47:58.957Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:47:58.958Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T13:47:58.958Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T13:47:58.959Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:47:58.962Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T13:47:58.965Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}
+2025-04-07T13:50:34.070Z [INFO]: AppController {/}: {"context":"RoutesResolver"}
+2025-04-07T13:50:34.075Z [INFO]: Mapped {/, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:50:34.076Z [INFO]: AddressController {/addresses}: {"context":"RoutesResolver"}
+2025-04-07T13:50:34.077Z [INFO]: Mapped {/addresses, POST} route {"context":"RouterExplorer"}
+2025-04-07T13:50:34.078Z [INFO]: Mapped {/addresses, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:50:34.078Z [INFO]: Mapped {/addresses/count, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:50:34.079Z [INFO]: Mapped {/addresses/random, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:50:34.079Z [INFO]: Mapped {/addresses/:id, GET} route {"context":"RouterExplorer"}
+2025-04-07T13:50:34.080Z [INFO]: Mapped {/addresses/:id, PUT} route {"context":"RouterExplorer"}
+2025-04-07T13:50:34.080Z [INFO]: Mapped {/addresses/:id, DELETE} route {"context":"RouterExplorer"}
+2025-04-07T13:50:34.083Z [INFO]: Nest application successfully started {"context":"NestApplication"}
+2025-04-07T13:50:34.088Z [INFO]: Application is running on: http://localhost:3001 {"context":"Bootstrap"}

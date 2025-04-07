@@ -8,9 +8,10 @@ export declare class AddressController {
     private readonly logger;
     constructor(addressService: AddressService, logger: LoggerService);
     create(createAddressDto: CreateAddressDto): Promise<Address>;
-    findAll(): Promise<Address[]>;
+    findAll(page?: number, limit?: number): Promise<Address[]>;
+    count(): Promise<number>;
+    getRandomAddress(): Address;
     findOne(id: string): Promise<Address>;
     update(id: string, updateAddressDto: UpdateAddressDto): Promise<Address>;
     remove(id: string): Promise<void>;
-    getRandomAddress(): Address;
 }

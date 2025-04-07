@@ -34,12 +34,26 @@ let StudentService = StudentService_1 = class StudentService {
             throw error;
         }
     }
-    async findAll() {
+    async findAll(page = 1, limit = 100) {
         try {
-            return await this.studentRepository.find();
+            const skip = (page - 1) * limit;
+            return await this.studentRepository.find({
+                skip,
+                take: limit,
+                order: { id: 'ASC' }
+            });
         }
         catch (error) {
             this.logger.error(`Failed to find all students: ${error.message}`, error.stack);
+            throw error;
+        }
+    }
+    async count() {
+        try {
+            return await this.studentRepository.count();
+        }
+        catch (error) {
+            this.logger.error(`Failed to count students: ${error.message}`, error.stack);
             throw error;
         }
     }

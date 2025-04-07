@@ -7,7 +7,8 @@ export declare class StudentService {
     private readonly logger;
     constructor(studentRepository: Repository<Student>);
     create(createStudentDto: CreateStudentDto): Promise<Student>;
-    findAll(): Promise<Student[]>;
+    findAll(page?: number, limit?: number): Promise<Student[]>;
+    count(): Promise<number>;
     findOne(id: string): Promise<Student>;
     update(id: string, updateStudentDto: UpdateStudentDto): Promise<Student>;
     remove(id: string): Promise<void>;

@@ -29,11 +29,25 @@ export class StudentService {
     }
   }
 
-  async findAll(): Promise<Student[]> {
+  async findAll(page: number = 1, limit: number = 100): Promise<Student[]> {
     try {
-      return await this.studentRepository.find();
+      const skip = (page - 1) * limit;
+      return await this.studentRepository.find({
+        skip,
+        take: limit,
+        order: { id: 'ASC' } // Rendezés ID szerint, hogy konzisztens legyen a lapozás
+      });
     } catch (error) {
       this.logger.error(`Failed to find all students: ${error.message}`, error.stack);
+      throw error;
+    }
+  }
+
+  async count(): Promise<number> {
+    try {
+      return await this.studentRepository.count();
+    } catch (error) {
+      this.logger.error(`Failed to count students: ${error.message}`, error.stack);
       throw error;
     }
   }

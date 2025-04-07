@@ -25,13 +25,11 @@ export class AddressService {
       `Creating new address: ${JSON.stringify(createAddressDto)}`,
       'AddressService',
     );
-
     // Create a new address entity and explicitly set the UUID
     const address = this.addressRepository.create({
       ...createAddressDto,
       id: uuidv4(), // Explicitly set the UUID
     });
-
     const savedAddress = await this.addressRepository.save(address);
     this.logger.log(
       `Address created with ID: ${savedAddress.id}`,
@@ -40,9 +38,22 @@ export class AddressService {
     return savedAddress;
   }
 
-  async findAll(): Promise<Address[]> {
-    this.logger.log('Fetching all addresses', 'AddressService');
-    return this.addressRepository.find();
+  async findAll(page: number = 1, limit: number = 100): Promise<Address[]> {
+    this.logger.log(
+      `Fetching addresses with pagination: page=${page}, limit=${limit}`,
+      'AddressService',
+    );
+    const skip = (page - 1) * limit;
+    return this.addressRepository.find({
+      skip,
+      take: limit,
+      order: { id: 'ASC' }, // Rendezés ID szerint, hogy konzisztens legyen a lapozás
+    });
+  }
+
+  async count(): Promise<number> {
+    this.logger.log('Counting all addresses', 'AddressService');
+    return this.addressRepository.count();
   }
 
   async findOne(id: string): Promise<Address> {

@@ -34,9 +34,18 @@ let AddressService = class AddressService {
         this.logger.log(`Address created with ID: ${savedAddress.id}`, 'AddressService');
         return savedAddress;
     }
-    async findAll() {
-        this.logger.log('Fetching all addresses', 'AddressService');
-        return this.addressRepository.find();
+    async findAll(page = 1, limit = 100) {
+        this.logger.log(`Fetching addresses with pagination: page=${page}, limit=${limit}`, 'AddressService');
+        const skip = (page - 1) * limit;
+        return this.addressRepository.find({
+            skip,
+            take: limit,
+            order: { id: 'ASC' },
+        });
+    }
+    async count() {
+        this.logger.log('Counting all addresses', 'AddressService');
+        return this.addressRepository.count();
     }
     async findOne(id) {
         this.logger.log(`Fetching address with ID: ${id}`, 'AddressService');
