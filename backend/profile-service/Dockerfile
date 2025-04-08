@@ -9,7 +9,7 @@ COPY package*.json ./
 RUN npm install
 
 # Telepítjük a NestJS CLI-t globálisan
-RUN npm install -g @nestjs/cli
+RUN npm install -g @nestjs/cli rimraf
 
 # Másoljuk a teljes projektet
 COPY . .

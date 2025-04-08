@@ -55,7 +55,7 @@ services:
       context: ./backend/address-service
     container_name: address-service
     ports:
-      - "3001:3000"
+      - "3001:3001"
     environment:
       - NODE_ENV=development
       - DB_HOST=postgres
